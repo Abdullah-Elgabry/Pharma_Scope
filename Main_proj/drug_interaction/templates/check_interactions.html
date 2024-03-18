@@ -43,17 +43,17 @@
           </ul>
       {% elif interactions is not None %}
   
-          <h2>Interactions:</h2>
-          <ul>
-              {% for interaction in interactions %}
-                  <li>
-                      <p>{{ interaction.drug1 }} ⇄ {{ interaction.drug2 }}:</p>
+          <h3 class="mb-4">
+            <span>3</span> result for Drug interactions!
+          </h3>
+          <div>
+             {% for interaction in interactions %}
+                      <h3>{{ interaction.drug1 }} ⇄ {{ interaction.drug2 }}:</3>
                       <p>{{ interaction.reason }}</p>
-                  </li>
               {% empty %}
-                  <li>No interactions found</li>
+                  <p>No interactions found</p>
               {% endfor %}
-          </ul>
+          </div> 
       {% endif %}
 
         </div>
