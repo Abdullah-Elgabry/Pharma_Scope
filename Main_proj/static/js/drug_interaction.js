@@ -30,7 +30,7 @@ function addDrug(){
 }
 btn_addDrug.onclick = function () { 
   if (document.querySelector(".drug-name").value.trim()) {
-    const value = document.querySelector(".drug-name").value;
+    const value = document.querySelector(".drug-name").value.trim();
     let s = document.createElement("span");
     if (!drug_list.includes(value)) {
       if(drug_list.length <= 10){
