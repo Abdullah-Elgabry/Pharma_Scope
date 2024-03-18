@@ -29,10 +29,12 @@
   {% endblock %}
 </head>
 <body>
-  
-    {% include 'aside.html' %}
-    {% block content %}
-    {% endblock content %}
+    <main class="d-flex gap-lg-4 gap-3">
+        {% include 'aside.html' %}
+        {% block content %}
+        {% endblock content %}
+    </main>
+    
     <script src="{% static 'js/all.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
