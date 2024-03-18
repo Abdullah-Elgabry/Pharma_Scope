@@ -23,4 +23,6 @@ urlpatterns = [
     path('drug-drug-interactions/', include('drug_interaction.urls')),
     path('Drug_id/', include('Drug_id_app.urls')),
     path('Podcast/', include('Podcast_app.urls')),
+    path('Food-Drug-Interactions/', include('Food_Interaction_app.urls')),
+
 ]
