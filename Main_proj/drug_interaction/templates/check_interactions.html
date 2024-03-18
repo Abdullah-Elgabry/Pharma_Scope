@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Drug Interactions {% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/drug_interaction.css' %}" />
+{% endblock %}
+{% block content %}
+    <article class="art">
+        <header>
+          <div>
+            <p>Discover</p>
+            <h1>Drug Interactions</h1>
+            <p>
+              Enter the effective ingredients of your medications to check for
+              potential interactions.
+            </p>
+          </div>
+        </header>
+        <div class="middle">
+          <section>
+            <form id="addDrugForm" class="form" method="get" autocomplete="off">
+              <div class="form-cont position-relative">
+                <h6>Drug(s)</h6>
+                <div id="autocompletes"></div>
+                <input class="drug-name" type="text" value="{{ drug }}" placeholder="Enter Drug Name">
+                <a class="add-drug">Add</a>
+                <div class="drugs"></div>
+              </div>
+              <button class="mb-3" type="submit">Analyze</button> 
+        <br>
+              <a class="btn-clear">Clear</a>
+          </form>
+            </section>
+              </div>
+        <div class="result">
+          {% if errors %}
+          <ul>
+              {% for error in errors %}
+                  <li>{{ error }}</li>
+              {% endfor %}
+          </ul>
+      {% elif interactions is not None %}
+  
+          <h2>Interactions:</h2>
+          <ul>
+              {% for interaction in interactions %}
+                  <li>
+                      <p>{{ interaction.drug1 }} ⇄ {{ interaction.drug2 }}:</p>
+                      <p>{{ interaction.reason }}</p>
+                  </li>
+              {% empty %}
+                  <li>No interactions found</li>
+              {% endfor %}
+          </ul>
+      {% endif %}
+
+        </div>
+      </article>
+      <button class="toggle-nav d-md-none d-none"><i class="fa-solid fa-arrow-right"></i></button>
+
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Error</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      let all_drugs = {{ all_drugs|safe }};
+    </script>
+
+    <script>
+      let words = [{% for drug in all_drugs  %}"{{drug}}", {% endfor %}];
+    </script>
+
+    <script src="{% static 'js/autocomplete.js' %}"></script>
+    <script src="{% static 'js/drug_interaction.js' %}"></script>
+{% endblock content %}

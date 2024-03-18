@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Drug id {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/Drug_id.css' %}" />
+{% endblock %}
+{% block content %}
+<article>
+    <header>
+        <div>
+            <p>Discover</p>
+            <h1>Drug i.d.</h1>
+            <p>Some active ingredients are negatively affected by your food. Check forbidden food.</p>
+        </div>
+    </header>
+    <div class="middle">
+        <section class="form-cont">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                        aria-selected="true">Description</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                        aria-selected="false">Image</button>
+
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active mt-3" id="nav-home" role="tabpanel"
+                    aria-labelledby="nav-home-tab">
+                    <h6>Pill Imprint</h6>
+                    <form action="">
+                        <input type="text" placeholder="Enter Pill Imprint">
+                        <div class="d-flex mb-4 gap-3 gap-lg-4">
+                            <section class="color-cont position-relative">
+                                <h6>Color</h6>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Color</option>
+                                    <option value="red">Red</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                </select>
+                                <span class="color"></span>
+                            </section>
+                            <section class="shape-cont position-relative">
+                                <h6>Shape</h6>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Shape</option>
+                                    <option value="rounded">Rounded</option>
+                                </select>
+                                <span class="color"></span>
+                            </section>
+                        </div>
+                        <div>
+                            <button type="submit">View Result</button>
+                            <span class="results">0</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade mt-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <form action="">
+                        <div>
+                            <button type="button" onclick="" class="upload d-block m-auto mt-4">
+                                <label for="file">
+                                    Upload Image
+                                </label>
+                            </button>
+                            <input type="file" id="file" name="file" accept="image/*" style="display:none;" />
+                        </div>
+
+                        <div class="position-relative mt-5">
+                            <hr />
+                            <span class="or">Or</span>
+                            <div class="" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+                                <p class="drag-zone">Drag one or more files to this <i>drop zone</i>.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                        <button type="submit">View Result</button>
+                        <span class="results">0</span>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </section>
+        <section class="guide">
+            <h6 class="text-center">HOW TO USE ?</h6>
+            <ul>
+                <li>Write down any typing on the drug.</li>
+                <li>Select the drug from the list.</li>
+                <li>Let the <span>magic works!</span></li>
+            </ul>
+        </section>
+    </div>
+    <div class="result">
+
+    </div>
+</article>
+
+<button class="toggle-nav d-md-none d-none"><i class="fa-solid fa-arrow-right"></i></button>
+
+
+{% endblock content %}
