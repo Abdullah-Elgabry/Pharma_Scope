@@ -34,21 +34,21 @@
           </form>
             </section>
               </div>
-        <div class="result" id="result_container">
+        <div class="result p-3 p-md-5" id="result_container">
           {% if errors %}
-          <div id="result_container">
-              {% for error in errors %}
-                  <p>{{ error }}</p>
-              {% endfor %}
-          </div>
-      {% elif interactions is not None %}
+            <div id="result_container">
+                {% for error in errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+          {% elif interactions is not None %}
   
-          <h3 class="mb-4" id="result_container">
+          <h3 class="mb-4 text-center" id="result_container">
             <span>3</span> result for Drug interactions!
           </h3>
-          <div>
+          <div class="interaction-result">
              {% for interaction in interactions %}
-                      <h3>{{ interaction.drug1 }} ⇄ {{ interaction.drug2 }}:</3>
+                      <h3>{{ interaction.drug1 }} ⇄ {{ interaction.drug2 }}:</h3>
                       <p>{{ interaction.reason }}</p>
               {% empty %}
                   <p>No interactions found</p>
