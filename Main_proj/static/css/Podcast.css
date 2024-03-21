@@ -108,7 +108,9 @@ article header div p:last-child {
     font-weight: 400;
     margin-bottom: 5px;
 }
-
+article .podcasts-cont {
+    padding-top: 3rem;
+}
 article .podcasts-cont .podcast a{
     text-decoration: none;
     color: #023047;
@@ -116,16 +118,17 @@ article .podcasts-cont .podcast a{
 article .podcasts-cont .podcast a h3{
     font-weight: 700;
     font-size: 32px;
+    margin-bottom: 1rem;
 }
-article .podcasts-cont .podcast .case{
+/* article .podcasts-cont .podcast .case{
     display: flex;
     gap: 500px;
-}
+} */
 article .podcasts-cont .podcast .case{
     background-color: white;
     padding: 15px 26px;
-    width: 920;
-    height: 322px;
+    /* width: 920px; */
+    height: 400px;
     border-radius: 15px;
     text-align: center;
     position: relative;
@@ -140,6 +143,9 @@ article .podcasts-cont .podcast .case h4{
 article .podcasts-cont .podcast .case img{
     width: 100%;
     border-radius: 16px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20%;
 }
 article .podcasts-cont .podcast .case .play{
     position: absolute;
@@ -205,12 +211,8 @@ main button.toggle-nav {
         width: 100%;
     }
 
-    article .podcasts-cont .podcast .cases {
-        flex-wrap: wrap;
-    }
-
     article .podcasts-cont .podcast .case {
-        width: 150px;
+        width: 100%;
     }
 
     article .podcasts-cont .podcast .case h4 {
