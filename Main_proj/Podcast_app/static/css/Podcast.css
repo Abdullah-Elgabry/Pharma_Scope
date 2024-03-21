@@ -124,7 +124,7 @@ article .podcasts-cont .podcast .cases{
     gap: 10px;
 }
 article .podcasts-cont .podcast .case{
-    background-color: white;
+    background-color: rgb(237, 10, 10);
     padding: 15px 26px;
     border-radius: 15px;
     width: 300px;

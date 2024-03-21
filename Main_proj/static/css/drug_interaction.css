@@ -17,8 +17,7 @@ article{
     width: 85%;
     min-height: 100vh;
     transition: 0.5s;
-    margin-left: 170px;
-    margin-top: -800px;
+
 }
 aside.open ~ article{
     width: 70%;

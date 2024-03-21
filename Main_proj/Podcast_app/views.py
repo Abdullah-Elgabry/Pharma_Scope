@@ -7,39 +7,22 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def Podcast(request):
-
     return render(request, 'Podcast.html')
 
+def Pharmaceutical_manufacturing(request):
+    return render(request, 'Pharmaceutical_manufacturing.html')
 
+def Mechanisms_of_interactions(request):
+    return render(request, 'Mechanisms_of_interactions.html')
 
-def Podcast_details(request):
+def Medical_Medium_Podcast(request):
+    return render(request, 'Medical_Medium_Podcast.html')
 
+def Medical_podcasts(request):
+    return render(request, 'Medical_podcasts.html')
 
+def pharmaceutical_Magazine(request):
+    return render(request, 'pharmaceutical_Magazine.html')
 
-
-
-    return render(request, 'Podcast-details.html')
-
-
-
-
-# def fetch_data(request):
-#     data = {...}
-#     return JsonResponse(data, content_type='application/json')
-
-
-
-
-def load(request):
-    try:
-        # Assuming your JSON file is named 'data.json' and is located in the same directory as views.py
-        with open('./static/audio/', 'r') as file:
-            json_data = json.load(file)
-        return render(request, 'Podcast-details.html', {'json_data': json_data})
-
-    except FileNotFoundError:
-        # Handle the case when the file is not found
-        return JsonResponse({'error': 'File not found'}, status=404)
-    except json.JSONDecodeError:
-        # Handle the case when the JSON data is invalid
-        return JsonResponse({'error': 'Invalid JSON format'}, status=500)
+def pharmaceutical_technology(request):
+    return render(request, 'pharmaceutical_technology.html')

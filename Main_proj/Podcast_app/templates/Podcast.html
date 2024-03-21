@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="{% static 'css/Podcast.css' %}" />
 {% endblock %}
 {% block content %}
-{% load static %}
     <article>
       <nav class="navbar gap-md-0">
         <!-- <div class="controls col-3 col-md-2 col-lg-1">
@@ -85,6 +84,9 @@
           </ul>
         </div>
       </nav>
+
+
+
       <header>
         <div>
           <p>Discover</p>
@@ -95,56 +97,68 @@
           </p>
         </div>
       </header>
-
       <div class="podcasts-cont pt-4 pb-4">
+
+
         <div class="podcast mb-3">
-          <a href="{% url 'Podcast-details' %}">
-            <h3>Podcast Name</h3>
+          <a href="{% url 'pharmaceutical_technology' %}">
+            <h3>Pharmaceutical Technology</h3>
+          </a>
+          <div class="cases">
+            <div class="case">
+              <img src="{% static './img/podcast#4.png' %}" alt="" />
+           <!--   <span class="play">
+                <i class="fa-solid fa-play"></i>
+              </span>
+              -->
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="podcast mb-3">
+          <a href="{% url 'Pharmaceutical_manufacturing' %}">
+            <h3>Pharmaceutical Manufacturing</h3>
           </a>
           <div class="cases">
             <div class="case">
               <img
                 class="img-fluid"
-                src="{% static './img/case-img-1.png' %}"
+                src="{% static './img/podcast#3.png' %}"
                 alt=""
               />
-              <h4>Case 1</h4>
-              <span class="play">
+           <!--   <span class="play">
                 <i class="fa-solid fa-play"></i>
               </span>
+              -->
             </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="podcast mb-3">
+          <a href="{% url 'Medical_Medium_Podcast' %}">
+            <h3>Medical Medium Podcast by Dr Anthony William</h3>
+          </a>
+          <div class="cases">
             <div class="case">
-              <img
-                class="img-fluid"
-                src="{% static './img/case-img-1.png' %}"
-                alt=""
-              />
-              <h4>Case 1</h4>
-              <span class="play">
+              <img src="{% static './img/podcast#5.png' %}" alt="" />
+           <!--   <span class="play">
                 <i class="fa-solid fa-play"></i>
               </span>
-            </div>
-            <div class="case">
-              <img
-                class="img-fluid"
-                src="{% static './img/case-img-1.png' %}"
-                alt=""
-              />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
-            </div>
-            <div class="case">
-              <img
-                class="img-fluid"
-                src="{% static './img/case-img-1.png' %}"
-                alt=""
-              />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
+              -->
             </div>
           </div>
         </div>
@@ -154,84 +168,65 @@
 
 
         <div class="podcast mb-3">
-          <a href="{% url 'Podcast-details' %}">
-            <h3>Podcast Name</h3>
+          <a href="{% url 'Medical_podcasts' %}">
+            <h3>The Medical Podcast</h3>
           </a>
           <div class="cases">
             <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
+              <img src="{% static './img/podcast#2.png' %}" alt="" />
+           <!--   <span class="play">
                 <i class="fa-solid fa-play"></i>
               </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
+              -->
             </div>
           </div>
         </div>
+
 
 
 
 
 
         <div class="podcast mb-3">
-          <a href="{% url 'Podcast-details' %}">
-            <h3>Podcast Name</h3>
+          <a href="{% url 'pharmaceutical_Magazine' %}">
+            <h3>Weekly pharmaceutical Magazine</h3>
           </a>
           <div class="cases">
             <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
+              <img src="{% static './img/podcast#1.png' %}" alt="" />
+           <!--   <span class="play">
                 <i class="fa-solid fa-play"></i>
               </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
-            </div>
-            <div class="case">
-              <img src="{% static './img/case-img-2.png' %}" alt="" />
-              <h4>Case 1</h4>
-              <span class="play">
-                <i class="fa-solid fa-play"></i>
-              </span>
+              -->
             </div>
           </div>
         </div>
+
+
+
+
+        <div class="podcast mb-3">
+          <a href="{% url 'Mechanisms_of_interactions' %}">
+            <h3>Mechanism Of Drug Interactions</h3>
+          </a>
+          <div class="cases">
+            <div class="case">
+              <img src="{% static './img/podcast#6.png' %}" alt="" />
+           <!--   <span class="play">
+                <i class="fa-solid fa-play"></i>
+              </span>
+              -->
+            </div>
+          </div>
+        </div>
+
+
       </div>
-    </article>
+   
 
     <button class="toggle-nav d-md-none d-none">
       <i class="fa-solid fa-arrow-right"></i>
     </button>
+  </article>
+<script src="{% static 'js/pod_details.js' %}"></script>
 {% endblock content %}

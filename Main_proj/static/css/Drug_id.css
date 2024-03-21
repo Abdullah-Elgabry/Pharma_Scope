@@ -7,8 +7,6 @@ article {
     width: 85%;
     min-height: 100vh;
     transition: 0.5s;
-    margin-left: 167px;
-    margin-top: -820px;
 }
 
 aside.open~article {
@@ -192,20 +190,6 @@ article div.result {
     background-color: #fff;
     margin-top: 15px;
     border-radius: 10px;
-}
-
-.toggle-nav {
-    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
-    color: white;
-    position: fixed;
-    bottom: 40px;
-    left: -55px;
-    border: 0;
-    z-index: 9;
-    padding-left: 55px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
 }
 
 @media (width <=767px) {

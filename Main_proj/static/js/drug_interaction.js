@@ -70,10 +70,11 @@ btn_clear.onclick = function () {
   document.querySelectorAll(".form input").forEach((i) => {
     i.value = "";
   });
+
   document.querySelectorAll(".drugs span").forEach((s) => {
     s.remove();
   });
-  document.querySelector(".drugs").classList.remove("mb-3");
+  document.getElementById("result_container").innerHTML = "";
   drug_list.splice(0,drug_list.length);
   autocompletes.innerHTML = '';
 };

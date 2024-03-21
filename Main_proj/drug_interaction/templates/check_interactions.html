@@ -34,16 +34,16 @@
           </form>
             </section>
               </div>
-        <div class="result">
+        <div class="result" id="result_container">
           {% if errors %}
-          <div>
+          <div id="result_container">
               {% for error in errors %}
                   <p>{{ error }}</p>
               {% endfor %}
           </div>
       {% elif interactions is not None %}
   
-          <h3 class="mb-4">
+          <h3 class="mb-4" id="result_container">
             <span>3</span> result for Drug interactions!
           </h3>
           <div>
@@ -100,7 +100,7 @@
     </script>
 
     <script>
-      let words = [{% for drug in all_drugs  %}"{{drug}}", {% endfor %}];
+      let words = [{% for drug in all_drugs %}"{{drug}}", {% endfor %}];
     </script>
 
     <script src="{% static 'js/autocomplete.js' %}"></script>

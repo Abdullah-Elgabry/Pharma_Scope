@@ -7,8 +7,6 @@ article {
     width: 85%;
     min-height: 100vh;
     transition: 0.5s;
-    margin-left: 167px;
-    margin-top: -820px;
 }
 
 aside.open~article {
@@ -119,17 +117,19 @@ article .podcasts-cont .podcast a h3{
     font-weight: 700;
     font-size: 32px;
 }
-article .podcasts-cont .podcast .cases{
+article .podcasts-cont .podcast .case{
     display: flex;
-    gap: 10px;
+    gap: 500px;
 }
 article .podcasts-cont .podcast .case{
     background-color: white;
     padding: 15px 26px;
+    width: 920;
+    height: 322px;
     border-radius: 15px;
-    width: 300px;
     text-align: center;
     position: relative;
+
 }
 article .podcasts-cont .podcast .case h4{
     font-weight: 700;
