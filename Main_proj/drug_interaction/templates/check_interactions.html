@@ -95,14 +95,17 @@
       </div>
     </article>
 
-    <script>
-      let all_drugs = {{ all_drugs|safe }};
-    </script>
 
-    <script>
-      let words = [{% for drug in all_drugs %}"{{drug}}", {% endfor %}];
-    </script>
+    
 
-    <script src="{% static 'js/autocomplete.js' %}"></script>
-    <script src="{% static 'js/drug_interaction.js' %}"></script>
+    
 {% endblock content %}
+
+{% block script %}
+<script>
+  let all_drugs = {{ all_drugs| safe }};
+  let words = [{% for drug in all_drugs %}"{{drug}}", {% endfor %}];
+</script>
+<script src="{% static 'js/autocomplete.js' %}"></script>
+<script src="{% static 'js/drug_interaction.js' %}"></script>
+{% endblock %}

@@ -8,14 +8,14 @@
 {% block content %}
 <article>
   <h3 class="podcast-name">Mechanism Of Drug Interactions</h3>
-  <div class="podcasts-cont d-flex pt-4 pb-4">
-    <div class="podcast col-8">
+  <div class="podcasts-cont d-flex flex-column-reverse flex-md-row pt-4 pb-4">
+    <div class="podcast col-md-8">
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/playlist/0F3hvNMdtRAfdiMCdtQCIo?utm_source=generator&theme=0" width="100%"
         height="696" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
-    <div class="col-4 px-3">
+    <div class="col-md-4 px-md-3 mb-4 mb-md-0">
       <div class="about">
         <h3>About:</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus eligendi aspernatur ipsam nisi. Atque,
@@ -26,5 +26,8 @@
     
   </div>
 </article>
-<script src="{% static 'js/pod_details.js' %}"></script>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/pod_details.js' %}"></script>
+{% endblock %}

@@ -7,6 +7,7 @@
 {% block head %}
   <link rel="stylesheet" href="{% static 'css/Podcast.css' %}" />
 {% endblock %}
+
 {% block content %}
     <article>
       <nav class="navbar gap-md-0">
@@ -191,10 +192,10 @@
 
       </div>
    
-
-    <button class="toggle-nav d-md-none d-none">
-      <i class="fa-solid fa-arrow-right"></i>
-    </button>
-  </article>
-<script src="{% static 'js/pod_details.js' %}"></script>
+      <h5 class="validTxt">Not Found!!</h5>
+    </article>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/podcast.js' %}"></script>
+{% endblock %}

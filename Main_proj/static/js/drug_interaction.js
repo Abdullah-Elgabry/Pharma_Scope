@@ -1,33 +1,10 @@
-let btn_back = document.querySelector(".back");
-let btn_show = document.querySelector(".toggle-nav");
-let btn_close = document.querySelector(".close");
 let autocompletes = document.getElementById("autocompletes");
 let search = document.querySelector(".drug-name");
-
-
-btn_back.onclick = function () {
-  document.querySelector("aside").classList.toggle("open");
-  document.querySelectorAll("aside ul li a").forEach((c) => {
-    c.classList.toggle("open");
-  });
-  // document.querySelector('.arrow').classList.toggle('d-none')
-  // document.querySelector('.bars').classList.toggle('d-none')
-};
-
-btn_show.onclick = function () {
-  document.querySelector("aside").classList.remove("close");
-  this.classList.add("d-none");
-};
-btn_close.onclick = function () {
-  document.querySelector("aside").classList.add("close");
-  btn_show.classList.remove("d-none");
-};
-
 let btn_addDrug = document.querySelector(".add-drug");
 let btn_clear = document.querySelector(".btn-clear");
 let drug_list = []
-function addDrug(){
-}
+
+
 btn_addDrug.onclick = function () { 
   if (document.querySelector(".drug-name").value.trim()) {
     const value = document.querySelector(".drug-name").value.trim();
@@ -65,7 +42,6 @@ btn_addDrug.onclick = function () {
   }
 }
 
-
 btn_clear.onclick = function () {
   document.querySelectorAll(".form input").forEach((i) => {
     i.value = "";
@@ -78,9 +54,6 @@ btn_clear.onclick = function () {
   drug_list.splice(0,drug_list.length);
   autocompletes.innerHTML = '';
 };
-
-
-
 
 search.addEventListener("keyup", () => {
   if (search.value.length > 0) {
@@ -98,7 +71,6 @@ search.addEventListener("keyup", () => {
     } 
   }
 });
-
 
 search.addEventListener("keydown", (e) => {
   if (search.value.length <= 1 && e.keyCode == 8) {

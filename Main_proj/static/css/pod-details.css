@@ -449,7 +449,7 @@ main button.toggle-nav {
 
     article {
         width: 100%;
-        padding: 0 1.5rem;
+        padding: 20px 1.5rem;
     }
 
     aside.open~article {
@@ -563,3 +563,5 @@ main button.toggle-nav {
     }
     
 }
+
+
