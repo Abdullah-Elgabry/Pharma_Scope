@@ -26,3 +26,5 @@ def pharmaceutical_Magazine(request):
 
 def pharmaceutical_technology(request):
     return render(request, 'pharmaceutical_technology.html')
+# def pharmaceutical_technology(request,podcast_id):
+#     return render(request, 'pharmaceutical_technology.html' , {'id' : podcast_id})

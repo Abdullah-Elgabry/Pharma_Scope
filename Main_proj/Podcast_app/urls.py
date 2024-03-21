@@ -10,4 +10,5 @@ urlpatterns = [
     path('Medical_podcasts', views.Medical_podcasts, name='Medical_podcasts'),
     path('pharmaceutical_Magazine', views.pharmaceutical_Magazine, name='pharmaceutical_Magazine'),
     path('pharmaceutical_technology', views.pharmaceutical_technology, name='pharmaceutical_technology'),
+    # path('<int:podcast_id>/', views.pharmaceutical_technology, name='pharmaceutical_technology'),
 ]
