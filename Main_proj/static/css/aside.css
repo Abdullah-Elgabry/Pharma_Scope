@@ -17,7 +17,7 @@ aside{
     top: 0;
 }
 aside.open{
-    padding: 2rem 4rem 2rem 6rem;
+    padding: 2rem 4rem 2rem 5rem;
     width: 25%;
 }
 aside a.logo{
@@ -41,8 +41,8 @@ aside ul li a{
     /* color: #219EBC; */
     color: #156578;
     text-decoration: none;
-    transition: 0.3s all;
     overflow: hidden;
+    font-weight: 500;
 }
 aside ul li a.open{
     width: 100%;
@@ -56,7 +56,6 @@ aside ul li a.active{
 }
 aside ul li a:hover{
     color: #023047;
-    font-weight: 600;
 }
 aside ul li a:hover svg path{
     fill: #023047;
@@ -72,7 +71,7 @@ aside button svg{
     font-size: 22px;
 }
 aside button.close svg{
-    color: red;
+    color: #c30000;
 }
 
 aside.open ~ article{

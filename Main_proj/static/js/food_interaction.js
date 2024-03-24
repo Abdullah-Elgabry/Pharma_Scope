@@ -58,7 +58,15 @@ async function fetchDrugSuggestions(inputText) {
 // Function to display drug suggestions in suggestionsContainer
 function displayDrugSuggestions(data) {
     const suggestionsContainer = document.getElementById("suggestionsContainer");
+    suggestionsContainer.classList.add('active')
     suggestionsContainer.innerHTML = "";
+    let styleText;
+    if(data.length > 5){
+        styleText = 'height: 200px;overflow-y: scroll'
+    }else{
+        styleText = ''
+    }
+    suggestionsContainer.style.cssText = styleText
     data.forEach(drug => {
         const div = document.createElement("div");
         div.textContent = drug.name;
@@ -72,9 +80,16 @@ function displayDrugSuggestions(data) {
 
         suggestionsContainer.appendChild(div);
     });
+
+    if(data.length == 0){
+        suggestionsContainer.innerHTML = "Not Found"
+    }
 }
 
 // Function to clear drug suggestions
 function clearSuggestions() {
     document.getElementById("suggestionsContainer").innerHTML = "";
+    document.getElementById("suggestionsContainer").classList.remove('active');
+    suggestionsContainer.style.cssText = '';
+
 }

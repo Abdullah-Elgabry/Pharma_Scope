@@ -7,24 +7,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def Podcast(request):
-    return render(request, 'Podcast.html')
+    return render(request, 'Podcast.html' , {'activePodcast': True})
 
 def Pharmaceutical_manufacturing(request):
-    return render(request, 'Pharmaceutical_manufacturing.html')
+    return render(request, 'Pharmaceutical_manufacturing.html', {'activePodcast': True})
 
 def Mechanisms_of_interactions(request):
-    return render(request, 'Mechanisms_of_interactions.html')
+    return render(request, 'Mechanisms_of_interactions.html', {'activePodcast': True})
 
 def Medical_Medium_Podcast(request):
-    return render(request, 'Medical_Medium_Podcast.html')
+    return render(request, 'Medical_Medium_Podcast.html', {'activePodcast': True})
 
 def Medical_podcasts(request):
-    return render(request, 'Medical_podcasts.html')
+    return render(request, 'Medical_podcasts.html', {'activePodcast': True})
 
 def pharmaceutical_Magazine(request):
-    return render(request, 'pharmaceutical_Magazine.html')
+    return render(request, 'pharmaceutical_Magazine.html', {'activePodcast': True})
 
 def pharmaceutical_technology(request):
-    return render(request, 'pharmaceutical_technology.html')
+    return render(request, 'pharmaceutical_technology.html', {'activePodcast': True})
 # def pharmaceutical_technology(request,podcast_id):
 #     return render(request, 'pharmaceutical_technology.html' , {'id' : podcast_id})

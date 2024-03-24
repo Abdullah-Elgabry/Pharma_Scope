@@ -136,6 +136,9 @@ article div section h6{
     font-weight: 600;
     margin-bottom: 15px;
 }
+article div section form{
+    position: relative;
+}
 article div section form input{
     width: 60%;
     border: 1px solid #858C94;
@@ -162,8 +165,20 @@ article div section form span{
     border: 0;
     color: white;
     height: 40px;
-
 }
+
+article form #suggestionsContainer.active{
+    position: absolute;
+    background-color: #fff;
+    width: 60%;
+    box-shadow: 0 0 7px 3px #ddd;
+    padding: 10px;
+    top: 45px;
+}
+article form #suggestionsContainer .drug-suggestion{
+    padding: 5px;
+}
+
 article div section:last-child{
     width: 30%;
     padding: 15px;

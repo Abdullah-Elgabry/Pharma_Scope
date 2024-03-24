@@ -23,6 +23,7 @@ def check_drug_interactions(request):
         request,
         'check_interactions.html',
         {
-            'interactions': interactions, 'drugs': drug_names, 'all_drugs': [drug.name for drug in Drug.objects.all()]
+            'interactions': interactions, 'drugs': drug_names, 'all_drugs': [drug.name for drug in Drug.objects.all()],
+            'activeDrug' : True
         }
     )

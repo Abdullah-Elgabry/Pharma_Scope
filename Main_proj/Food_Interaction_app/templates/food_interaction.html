@@ -8,46 +8,45 @@
   <link rel="stylesheet" href="{% static './css/food_interaction.css' %}">
 {% endblock %}
 {% block content %}
-<article>
-    <header>
-        <div>
-            <p>Discover</p>
-            <h1>FOOD Interactions</h1>
-            <p>Some active ingredients are negatively affected by your food. Check forbidden food.</p>
+    <article>
+        <header>
+            <div>
+                <p>Discover</p>
+                <h1>FOOD Interactions</h1>
+                <p>Some active ingredients are negatively affected by your food. Check forbidden food.</p>
+            </div>
+        </header>
+        <div class="middle">
+            <section>
+                <h6>ADD DRUGS TO CHECK FOR INTERACTIONS</h6>
+                <form id="interactionForm" method="post" action="{% url 'view_interactions' %}">
+                    {% csrf_token %}
+                    <input type="text" id="drugInput" name="drug_name" placeholder="Enter Drug">
+                    <div id="suggestionsContainer"></div>
+                    <div>
+                        <button type="submit">View Result</button>
+                        <span id="numInteractions">0</span>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <h6 class="text-center">HOW TO USE ?</h6>
+                <ul>
+                    <li>Write down any typing on the drug.</li>
+                    <li>Select the drug from the list.</li>
+                    <li>Let the <span>magic works!</span></li>
+                </ul>
+            </section>
         </div>
-    </header>
-    <div class="middle">
-        <section>
-            <h6>ADD DRUGS TO CHECK FOR INTERACTIONS</h6>
-            <form id="interactionForm" method="post" action="{% url 'view_interactions' %}">
-                {% csrf_token %}
-                <input type="text" id="drugInput" name="drug_name" placeholder="Enter Drug">
-                <div id="suggestionsContainer"></div>
-                <div>
-                    <button type="submit">View Result</button>
-                    <span id="numInteractions">0</span>
-                </div>
-            </form>
-        </section>
-        <section>
-            <h6 class="text-center">HOW TO USE ?</h6>
-            <ul>
-                <li>Write down any typing on the drug.</li>
-                <li>Select the drug from the list.</li>
-                <li>Let the <span>magic works!</span></li>
-            </ul>
-        </section>
-    </div>
-    <div id="resultSection" class="result text-center p-4" style="display: none;">
-        <h3 class="mb-4">
-            <span id="resultCount">0</span> result for food interactions with <span id="drugName">[Drug Name]</span> !
-        </h3>
-        <div class="inter-result" id="interactionsList">
+        <div id="resultSection" class="result text-center p-4" style="display: none;">
+            <h3 class="mb-4">
+                <span id="resultCount">0</span> result for food interactions with <span id="drugName">[Drug Name]</span> !
+            </h3>
+            <div class="inter-result" id="interactionsList">
 
+            </div>
         </div>
-    </div>
-</article>
-
+    </article>
 
 {% endblock content %}
 

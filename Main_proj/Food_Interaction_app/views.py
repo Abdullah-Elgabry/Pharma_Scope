@@ -3,7 +3,7 @@ from .models import Interaction, Drug
 from django.http import JsonResponse
 
 def index(request):
-    return render(request,'food_interaction.html')
+    return render(request,'food_interaction.html',{'activeFood': True})
 
 def view_interactions(request):
     if request.method == 'POST':
@@ -12,7 +12,7 @@ def view_interactions(request):
         num_interactions = interactions.count()
         interactions_list = [{'description': interaction.description} for interaction in interactions]
         return JsonResponse({'num_interactions': num_interactions, 'interactions': interactions_list})
-    return render(request, 'food_interaction.html')
+    return render(request, 'food_interaction.html' , {'activeFood': True})
 
 
 def drug_suggestions(request):
