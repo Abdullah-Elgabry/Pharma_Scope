@@ -72,7 +72,7 @@ aside button svg{
     font-size: 22px;
 }
 aside button.close svg{
-    color: red;
+    color: #c30000;
 }
 
 aside.open ~ article{
