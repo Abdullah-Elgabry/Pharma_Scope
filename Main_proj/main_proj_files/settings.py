@@ -130,14 +130,6 @@ USE_TZ = True
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = 'static/'
-#STATICFILES_DIRS = [
-    #os.path.join(BASE_DIR, 'static'),
-    #os.path.join(BASE_DIR, 'Home_app/static'),
-    #os.path.join(BASE_DIR, 'Drug_id_app/static'),
-    #os.path.join(BASE_DIR, 'Podcast_app/static'),
-    #BASE_DIR / "static",
-
-#]
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
