@@ -5,17 +5,39 @@ let btn_clear = document.querySelector(".btn-clear");
 let drug_list = []
 
 
+
+function displayDrug (value) { 
+  let s = document.createElement("span");
+  s.innerText = value;
+  s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
+  document.querySelector(".drugs").appendChild(s);
+  document.querySelector(".drugs").classList.add("mb-3");
+
+  // remove durg from list on click it
+  s.onclick = function () {
+    drug_list = drug_list.filter((drug) => drug != value);
+    this.remove();
+    let allInputs = document.querySelectorAll('input[type="hidden"]');
+    allInputs.forEach((i) => {
+      if (i.value == s.textContent) {
+        i.remove();
+      }
+    });
+    if (document.querySelector(".drugs").children.length == 0) {
+      document.querySelector(".drugs").classList.remove("mb-3")
+    }
+  };
+ }
+
+
 btn_addDrug.onclick = function () { 
   if (document.querySelector(".drug-name").value.trim()) {
     const value = document.querySelector(".drug-name").value.trim();
-    let s = document.createElement("span");
     if (!drug_list.includes(value)) {
       if(drug_list.length <= 10){
         drug_list.push(value);
-        s.innerText = value;
-        s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
-        document.querySelector(".drugs").appendChild(s);
-        document.querySelector(".drugs").classList.add("mb-3");
+        
+        displayDrug(value)
 
         // Create a new input element
         var drugInput = document.createElement("input");
