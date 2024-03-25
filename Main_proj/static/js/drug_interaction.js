@@ -99,3 +99,14 @@ search.addEventListener("keydown", (e) => {
     autocompletes.innerHTML = "";
   }
 });
+
+
+function handleTabKey(event) {
+  // Check if the pressed key is the tab key
+  if (event.key === "Tab") {
+    event.preventDefault(); // Prevent the default tab behavior
+    document.querySelector("input").value = autocompletes.innerHTML;
+  }
+}
+
+document.addEventListener("keydown", handleTabKey);

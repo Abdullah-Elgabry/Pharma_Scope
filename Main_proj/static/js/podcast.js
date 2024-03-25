@@ -24,3 +24,6 @@ search.addEventListener("input", () => {
     document.querySelector(".validTxt").classList.add("d-none");
   }
 });
+
+
+
