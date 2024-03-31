@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def Cases(request):
+
+    return render(request, 'Cases.html' , {'activeCases' : True})
