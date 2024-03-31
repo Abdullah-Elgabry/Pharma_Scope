@@ -103,7 +103,7 @@ search.addEventListener("keydown", (e) => {
 
 function handleTabKey(event) {
   // Check if the pressed key is the tab key
-  if (event.key === "Tab") {
+  if (event.key === "ArrowRight") {
     event.preventDefault(); // Prevent the default tab behavior
     document.querySelector("input").value = autocompletes.innerHTML;
   }

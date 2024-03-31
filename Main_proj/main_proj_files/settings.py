@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'Drug_id_app',
     'Podcast_app',
     'Food_Interaction_app',
+    'Cases_app',
     
 ]
 
