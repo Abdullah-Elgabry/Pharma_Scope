@@ -5,9 +5,10 @@ from dotenv import load_dotenv
 from django.conf import settings
 import json
 
-load_dotenv()
-api_key = os.getenv("OPENAI_KEY", None)
-openai.api_key = api_key
+#load_dotenv()
+#api_key = os.getenv("OPENAI_KEY", None)
+OPENAI_KEY='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'
+openai.api_key = OPENAI_KEY
 
 def Home(request):
     chatbot_response = ""
