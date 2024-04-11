@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MernWord - Cases</title>
     <link rel="shortcut icon" href="{% static './img/icons8-pharmacy-shop-16.png' %}" type="image/x-icon" />
-    <link rel="stylesheet" href="{% static 'css/cases.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/case-details.css' %}" />
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,9 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">MernWord</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,7 +58,7 @@
                         <a class="nav-link" href="{% url 'Podcast' %}">Podcast</a>
                     </li>
                 </ul>
-    
+
                 <div class="auth">
                     <a href="{% url 'Home' %}">Sign in</a>
                     <a class="sign-up" href="{% url 'Home' %}">Sign up</a>
@@ -68,74 +69,54 @@
 
     <div class="heading text-center">
         <p class="mb-2"><b>Latest Cases</b></p>
-        <h3>Patient<span> Simulations</span></h3>
-        <span>April 2024 |By Pharma Scope</span>
+        <h3>Patient |<span> Simulations</span></h3>
+        <span>March3 ,2024 |By Pharma Scope</span>
     </div>
-    <div class="container">
-        <main class="row pt-5 pb-5 justify-content-center">
-            <div class="col-lg-10">
-                <header class="mb-5 position-relative">
-                    <img class="img-fluid w-100" src="{% static './img/articles-bg.png' %}" alt="">
-                    <div class="description">
-                        <button>patient Simulations</button>
-                        <p class="mb-3 title">Pharma Scope patient Simulations provide a clinical decision-making.</p>
-                        <p class="about">Pharma Scope Patient Simulations include a dynamic interview via video,
-                            ability to perform tests and receive real-time results and clinical guidance,
-                            and the ability to make diagnoses and select treatments.</p>
-                    </div>
-                </header>
-                <div class="article mb-4">
-                    <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-01.png' %}" alt="">
-                    </div>
-                    <div class="art-details col-md-10 px-2 px-md-4">
-                        <h5>A 63-Year-Old Man With Abnormal Prostate Findings</h5>
-                        <p class="text-black-50">
-                            <br>
-                            An asymptomatic 63-year-old man has an elevated PSA and suspicious DRE findings after a recent routine GP visit.
-                            What are the next steps for diagnosis and possible treatment options?<br>
-                            Pharma Scope, April 2024
-                        </p>
-                        <a class="read-more more-article" href="{% url 'case_one' %}">Read more <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="article mb-4">
-                    <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-02.png' %}" alt="">
-                    </div>
-                    <div class="art-details col-md-10 px-2 px-md-4">
-                        <h5>A 22-Year-Old Woman With Moderate Plaque Psoriasis</h5>
-                        <p class="text-black-50">
-                            <br>
-                            A young woman's plaque psoriasis continues to worsen despite treatment with a high-potency corticosteroid.
-                            How would you assess and manage this patient's condition?<br>
-                            Pharma Scope, April 2024
-                        </p>
-                        <a class="read-more more-article" href="{% url 'case_two' %}">Read more <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="article">
-                    <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-03.png' %}" alt="">
-                    </div>
-                    <div class="art-details col-md-10 px-2 px-md-4">
-                        <h5>A 35-Year-Old Woman With Recurrent Arm Paresthesia</h5>
-                        <p class="text-black-50">
-                            <br>
-                            A 35-year-old woman has had two episodes of paresthesia in her arm and hand over the past 6 months.
-                            How would you evaluate and treat this patient?
-                            <br>
-                            Pharma Scope, April 2024
-                        </p>
-                        <a class="read-more more-article" href="{% url 'case_three' %}">Read more <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            
-            <!-- <aside class="col-lg-4">
-            </aside> -->
-        </main>
+    <div class="container pt-5 pb-5">
+        <div class="title-one mb-5">
+            <h3 class="heading-name">History of Present Illness</h3>
+            <p>
+                Shannon C. is a 22-year-old White woman presenting for a follow-up of recently diagnosed plaque psoriasis.
+                She was initially diagnosed with mild plaque psoriasis during an urgent care visit 8 weeks ago when she presented with a painful red pruritic rash on her elbows.
+                She was prescribed a moderate-potency topical corticosteroid (triamcinolone 0.1%) along with an emollient cream and was referred to dermatology for a follow-up.
+                Four weeks later, she presented to dermatology and reported no relief of her symptoms despite topical treatment.
+                BSA measurement revealed worsening of disease severity and her diagnosis was upgraded to moderate plaque psoriasis, and she was prescribed a high-potency topical corticosteroid (clobetasol 0.05%).
+                Shannon presents today after 4 weeks of treatment with a high-potency topical corticosteroid and says her rash has spread to her lower back with increased pruritus causing her lesions to bleed.
+                She also complains of sleep disturbance and difficulty focusing at work owing to her worsening symptoms.
+                She has no comorbidities, has no history of allergies, and has an IUD in place for long-term contraception.
+            </p>
+        </div>
+        <div class="title-two mb-5">
+            <h3 class="heading-name">Family and Social History</h3>
+            <p>
+                Shannon C. has no family history of psoriasis,
+                atopic dermatitis, or any other dermatologic or autoimmune disorders.
+                She is single and is actively dating.<br> She works as an intern at an interior design firm.
+                She has never smoked, drinks one to two alcoholic beverages per week, and does not use recreational or illicit drugs.
+            </p>
+        </div>
+        <div class="title-three">
+            <h3 class="heading-name">Physical Examination Notes</h3>
+            <table style="border: 1px solid; border-collapse: collapse;">
+                <tr>
+                  <th style="border: 1px solid; padding: 5px;">GENERAL</th>
+                  <td style="border: 1px solid; padding: 5px;">No acute distress, alert and oriented ×3.</td>
+                </tr>
+                <tr>
+                  <th style="border: 1px solid; padding: 5px;">SKIN</th>
+                  <td style="border: 1px solid; padding: 5px;">Raised, thick, erythematous, scaly, well-demarcated lesions on the extensor surfaces of both elbows and the lumbosacral region of the lower back. No discoloration, pitting, onycholysis, or other abnormalities.</td>
+                </tr>
+                <tr>
+                  <th style="border: 1px solid; padding: 5px;">NAILS</th>
+                  <td style="border: 1px solid; padding: 5px;">No discoloration, pitting, onycholysis, or other abnormalities.</td>
+                </tr>
+                <tr>
+                  <th style="border: 1px solid; padding: 5px;">JOINTS</th>
+                  <td style="border: 1px solid; padding: 5px;">No restrictions or limitations in movement. Normal range of motion.</td>
+                </tr>
+              </table>
+        </div>
     </div>
 
     <footer>

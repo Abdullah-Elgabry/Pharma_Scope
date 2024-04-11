@@ -51,7 +51,7 @@ function fetchData() {
 
 fetchData().then(() => {
   console.log(Cases.Podcast_Name_1);
-  displayCases(Cases.Podcast_Name_1);
+  displayCases(Casesst_Name_1);
 });
 
 function displayCases(cases) {

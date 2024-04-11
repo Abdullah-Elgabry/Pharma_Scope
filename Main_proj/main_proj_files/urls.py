@@ -24,6 +24,6 @@ urlpatterns = [
     path('Drug_id/', include('Drug_id_app.urls')),
     path('Podcast/', include('Podcast_app.urls')),
     path('Food-Drug-Interactions/', include('Food_Interaction_app.urls')),
-    path('Cases/', include('Cases_app.urls')),
+    path('Cases', include('Cases_app.urls')),
 
 ]

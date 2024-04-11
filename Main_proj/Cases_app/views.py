@@ -6,6 +6,14 @@ def Cases(request):
 
 
 
-def Case_Details(request):
+def case_one(request):
 
-    return render(request, 'Case_Details.html' , {'activeCase' : True})
+    return render(request, 'case_one.html' , {'activeCase' : True})
+
+def case_two(request):
+
+    return render(request, 'case_two.html' , {'activeCase' : True})
+
+def case_three(request):
+
+    return render(request, 'case_three.html' , {'activeCase' : True})
