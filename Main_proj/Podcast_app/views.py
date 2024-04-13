@@ -3,9 +3,11 @@ from django.http import JsonResponse
 import json
 from django.http import JsonResponse
 import os
+from django.contrib.auth.decorators import login_required
 from dotenv import load_dotenv
 load_dotenv()
 
+@login_required(login_url = 'signin')
 def Podcast(request):
     return render(request, 'Podcast.html' , {'activePodcast': True})
 

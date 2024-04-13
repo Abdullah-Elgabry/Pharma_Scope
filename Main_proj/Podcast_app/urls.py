@@ -1,6 +1,8 @@
 from django.urls import path
 from django.shortcuts import redirect
 from . import views
+from Registration_app import views as registration_views
+
 
 urlpatterns = [
     path('', views.Podcast, name='Podcast'),
@@ -11,4 +13,5 @@ urlpatterns = [
     path('pharmaceutical_Magazine', views.pharmaceutical_Magazine, name='pharmaceutical_Magazine'),
     path('pharmaceutical_technology', views.pharmaceutical_technology, name='pharmaceutical_technology'),
     # path('<int:podcast_id>/', views.pharmaceutical_technology, name='pharmaceutical_technology'),
+    path('logout/', registration_views.logout_view, name='logout'),
 ]

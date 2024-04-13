@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from drug_interaction.models import Drug, Interaction
+from django.contrib.auth.decorators import login_required
 
 
+
+@login_required(login_url = 'signin')
 def check_drug_interactions(request):
     drug_names = request.GET.getlist('drugs')
     errors = []

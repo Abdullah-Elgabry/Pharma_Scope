@@ -177,6 +177,10 @@ article .result>div {
     border-radius: 19.88px;
 }
 
+.result .interaction-result p{
+    color: #6d6d6d;
+}
+
 @media (width <=767px) {
     aside {
         padding: 2rem 1rem;

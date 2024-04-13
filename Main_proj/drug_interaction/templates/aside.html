@@ -419,6 +419,8 @@
         </button>
         <div class="mt-4">
           <hr class="w-50 m-auto" />
+          <form action="{% url 'logout' %}" method="post" class="logout-form">
+            {% csrf_token %}
           <button class="logout m-0 p-0 mt-4">
             <svg
               width="32"
@@ -437,5 +439,6 @@
               ></path>
             </svg>
           </button>
+          </form>
         </div>
       </aside>

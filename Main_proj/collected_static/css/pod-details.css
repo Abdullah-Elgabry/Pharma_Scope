@@ -6,12 +6,11 @@ body {
 
 article {
     position: relative;
-}
-article {
-    width: 85%;
+    width: 95%;
     min-height: 100vh;
     transition: 0.5s;
-
+    padding: 20px 2rem;
+    background-color: #fff;
 }
 
 aside.open~article {
@@ -147,19 +146,27 @@ article header div p:last-child {
     margin-bottom: 5px;
 }
 
-article .podcasts-cont .podcast a{
-    text-decoration: none;
+article .podcast-name{
     color: #023047;
-}
-article .podcasts-cont .podcast a h3{
     font-weight: 700;
     font-size: 32px;
 }
-article .podcasts-cont .podcast .cases{
-    /* display: flex; */
-    gap: 10px;
+
+article .podcasts-cont .about{
+    padding: 15px;
+    background-color: #282828;
+    color: #fff;
+    box-shadow: 22px 36px 34px -9px #CAE1EA6B;
+    border-radius: 12px;
 }
-article .podcasts-cont .podcast .case{
+
+
+
+/* article .podcasts-cont .podcast a{
+    text-decoration: none;
+    
+} */
+/* article .podcasts-cont .podcast .case{
     background-color: white;
     padding: 15px 35px;
     border-radius: 15px;
@@ -215,7 +222,7 @@ article .playlist .case-describtion .case-name{
 article .playlist .case-describtion .podcast-name{
     font-weight: 400;
     margin: 0;
-}
+} */
 
 
 main button.toggle-nav {
@@ -442,7 +449,7 @@ main button.toggle-nav {
 
     article {
         width: 100%;
-        padding: 0 1.5rem;
+        padding: 20px 1.5rem;
     }
 
     aside.open~article {
@@ -472,9 +479,6 @@ main button.toggle-nav {
     }
     article header .play svg{
         font-size: 25px;
-    }
-    article .podcasts-cont .podcast .cases {
-        flex-wrap: wrap;
     }
 
     article .podcasts-cont .podcast .case {
@@ -559,3 +563,5 @@ main button.toggle-nav {
     }
     
 }
+
+

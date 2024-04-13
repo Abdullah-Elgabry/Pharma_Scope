@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Interaction, Drug
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url = 'signin')
 def index(request):
     return render(request,'food_interaction.html',{'activeFood': True})
 
