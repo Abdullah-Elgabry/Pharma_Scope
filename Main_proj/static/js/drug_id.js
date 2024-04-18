@@ -48,3 +48,48 @@ function dragOverHandler(ev) {
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
 }
+
+function uploadImage() {
+    console.log("Image upload function called");
+}
+
+
+function handleFileSelect(event) {
+    const file = event.target.files[0];
+    const fileName = file.name;
+    document.getElementById('file-name').innerText = 'Selected Image: ' + fileName;
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const imagePreview = document.getElementById('image-preview');
+        imagePreview.src = event.target.result;
+        imagePreview.style.display = 'block';
+    }
+    reader.readAsDataURL(file);
+}
+
+
+document.getElementById('upload-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+
+    fetch('/Drug_id/classify/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        var resultElement = document.querySelector('.result');
+        if (resultElement) {
+            if ('result' in data) {
+                resultElement.innerHTML = "Drug name is " + data.result;
+            } else {
+                resultElement.innerHTML = "Error: " + data.error;
+            }
+        } else {
+            console.error("Element with class 'result' not found");
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});

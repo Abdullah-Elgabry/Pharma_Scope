@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import sys
 from pathlib import Path
 import os
-import openai
+#import openai
 
 
 
