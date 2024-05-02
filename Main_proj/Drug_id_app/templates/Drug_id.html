@@ -73,8 +73,10 @@
                                 </label>
                             </button>
                             <input type="file" id="file" name="file" accept="image/*" style="display:none;" onchange="handleFileSelect(event)" />
-                             <span id="file-name"></span>
-                             <img src="" alt="Uploaded Image" id="image-preview" style="display:none; max-width: 200px;">
+                             <div class="img-cont mt-3">
+                                 <img src="" alt="Uploaded Image" id="image-preview" style="display:none; max-width: 200px;">
+                                 <span id="file-name"></span>
+                             </div>
                         </div>
 
                         <div class="position-relative mt-5">
@@ -87,7 +89,7 @@
 
                         <div>
                         <button type="submit">View Result</button>
-                        <span class="results" id="result">0</span>
+                        <span class="img-results" id="result">0</span>
                         </div>
                     </form>
                 </div>
@@ -105,7 +107,9 @@
         </section>
     </div>
     <div class="result">
-
+        <div>
+            
+        </div>
     </div>
 
 <button class="toggle-nav d-md-none d-none"><i class="fa-solid fa-arrow-right"></i></button>

@@ -80,10 +80,10 @@ document.getElementById('upload-form').addEventListener('submit', function(event
     })
     .then(response => response.json())
     .then(data => {
-        var resultElement = document.querySelector('.result');
+        var resultElement = document.querySelector('.img-results');
         if (resultElement) {
             if ('result' in data) {
-                resultElement.innerHTML = "Drug name is " + data.result;
+                resultElement.innerHTML = data.result;
             } else {
                 resultElement.innerHTML = "Error: " + data.error;
             }
