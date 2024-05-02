@@ -34,6 +34,10 @@ nav .auth .sign-up{
     border-radius: 5px;
     margin: 0 7px;
 }
+nav .dropdown button{
+    background-color: var(--blue-color);
+    border-color: var(--blue-color);
+}
 nav .dropdown-item.active,
 nav .dropdown-item:active{
     background-color: transparent;
