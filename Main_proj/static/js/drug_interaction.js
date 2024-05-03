@@ -95,17 +95,18 @@ search.addEventListener("keyup", () => {
 });
 
 search.addEventListener("keydown", (e) => {
-  if (search.value.length <= 1 && e.keyCode == 8) {
+  if (e.key === 'Backspace') {
     autocompletes.innerHTML = "";
   }
+  
 });
 
 
 function handleTabKey(event) {
   // Check if the pressed key is the tab key
-  if (event.key === "ArrowRight") {
+  if (event.key === "Tab") {
     event.preventDefault(); // Prevent the default tab behavior
-    document.querySelector("input").value = autocompletes.innerHTML;
+    search.value = autocompletes.innerHTML;
   }
 }
 
