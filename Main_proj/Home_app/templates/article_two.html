@@ -1,0 +1,98 @@
+{% extends "article_base.html" %}
+{% load static %}
+{% block title %} article_two {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="">
+  <header class="position-relative">
+    <div class="header-title">
+      <h3 class="mb-3 title">
+        RSV Vaccines See a Pricey Leap Forward in Disease Prevention.
+      </h3>
+      <p class="pub-date">
+        <span>Publication date:</span> March 2, 2024 | 1 minute read
+      </p>
+    </div>
+    <div class="header-img text-center">
+      <img
+        class="w-100"
+        src="{% static './img/article-details-bg.png' %}"
+        alt=""
+      />
+    </div>
+  </header>
+
+  <div class="article-body bg-white">
+    <div class="container">
+      <section class="">
+        <div class="article-heading d-flex align-items-center gap-3">
+          <p>R</p>
+          <p>
+            Respiratory syncytial virus (RSV) is a widespread respiratory pathogen causing a range of symptoms,
+            from mild rhinorrhea and cough to severe lower respiratory tract illness (LRTI).
+            
+            Subtypes A and B of the virus typically surge during the fall and winter seasons,
+            disproportionately affecting older individuals; young children; and individuals with
+            underlying health conditions, most notably those with asthma and congestive heart failure. <br />
+          </p>
+        </div>
+        <p>
+          In May 2023, the FDA approved 2 RSV vaccines, one nonadjuvanted (Abrysvo; Pfizer) 
+          and one adjuvanted (Arexvy; GSK), for individuals 60 years and older.8,9 The nonadjuvanted
+          vaccine was also approved for pregnant individuals from week 32 through week 36 of pregnancy
+          to prevent RSV infection in infants.10 These vaccines offer hope in mitigating severe RSV infections, though questions about future doses and coordination with other preventive measures persist.
+        </p>
+        <p>
+          caused by bacteria or fungi. In addition, using antibiotics
+          without a doctor's supervision can cause anaphylactic shock, which
+          can lead to death if not treated quickly.
+        </p>
+        <h6>Read also Clinical Studies</h6>
+        <p>
+          Cortisone is also not used to treat cases of influenza and colds.
+          Rather, it is used to relieve severe swelling and pain in cases of
+          acute pneumonia, and its use is prohibited without medical
+          supervision due to its many side effects.
+        </p>
+        <p>
+          The nonadjuvanted vaccine was tested in the RENOIR study (NCT05035212),
+          a phase 3, multicenter, randomized, doubleblind, placebo-controlled study
+          that included 34,284 adults 60 years and older.11 The coprimary end points
+          evaluated were vaccine efficacy against RSV-associated LRTI with at least 2 or
+          at least 3 signs or symptoms. The study showed that the nonadjuvanted RSV vaccine
+          was effective in preventing both definitions of RSV-LRTI. Adverse event (AE) rates
+          were similar between groups; AEs mainly consisted of injection site pain.
+        </p>
+      </section>
+      <div class="related-article w-100 mx-auto mb-4 row">
+        <div
+          class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+        >
+          <img
+            class="img-fluid"
+            src="{% static './img/article-01.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="art-details col-md-9 col-lg-10">
+          <h5>New oral rinse could help detect gastric cancer in early stages</h5>
+          <p class="text-black-50">
+            <br>
+            This is early research that hasn't been published yet in a peer-reviewed
+            journal and this “swish and spit” rinse is not yet available.
+            In their study, researchers analyzed bacterial samples from 98 people - 30
+            with known gastric cancer, 30 with premalignant gastric conditions, and 38 people without gastric health issues...
+          </p>
+          <a class="read-more more-article" href="{% url 'article_three' %}"
+            >Read more <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    {% endblock %}

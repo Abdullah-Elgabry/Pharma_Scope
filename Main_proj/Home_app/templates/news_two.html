@@ -1,0 +1,102 @@
+{% extends "news_base.html" %}
+{% load static %}
+
+{% block title %} news {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="">
+      <header class="position-relative">
+        <div class="header-title">
+          <h3 class="mb-3 title">
+            Do Antipsychotic Overprescribing Warning Letters Work?
+        </h3>
+          <p class="pub-date">
+            <span>Publication date:</span> March 2, 2024 | 1 minute read
+          </p>
+        </div>
+        <div class="header-img text-center">
+          <img
+            class="w-100"
+            src="{% static './img/article-details-bg.png' %}"
+            alt=""
+          />
+        </div>
+      </header>
+
+      <div class="article-body bg-white">
+        <div class="container">
+          <section class="">
+            <div class="article-heading d-flex align-items-center gap-3">
+              <p>W</p>
+              <p>
+                Warning letters to primary care physicians (PCPs) regarding overprescription of 
+                quetiapine were helpful in reducing overprescribing of this agent, new research suggested.<br />
+                
+                Investigators analyzed data from an earlier trial that compared prescribing patterns in 5055 
+                PCPs who receive a placebo letter or three warning letters informing them that their prescribing
+                of quetiapine was high and under review by Medicare. <br />
+
+                The intervention reduced quetiapine use among all patients with dementia,
+                with no detectable adverse effects on cognitive function, behavioral symptoms, depression, metabolic diagnoses, hospitalization, or death.
+              </p>
+            </div>
+            <p>
+                This study found that overprescribing warning letters to PCPs safely reduced 
+                quetiapine prescribing to their patients with dementia," investigators led by 
+                Adam Sacarny, PhD, of the Department of Health Policy and Management, Mailman 
+                School of Public Health, Columbia University, New York, wrote.
+            </p>
+            <p>
+                This intervention and other[s] like it may be useful for future efforts to promote
+                 guideline-concordant care," they add.The study was published online on April 25, 
+                 2024, in JAMA Network Open.
+            </p>
+            <h6>Read also Off-label Prescribing Common</h6>
+            <p>
+                The off-label use of antipsychotics in patients with dementia is
+                 fairly common, the investigators noted, affecting roughly one in 
+                 seven nursing home residents and a similar number of community-dwelling 
+                 older adults with dementia. 
+            </p>
+            <p>
+                The agents are often prescribed to treat behavioral symptoms associated with
+                 dementia, including agitation and aggression. Although some evidence supports
+                  this use, antipsychotics in dementia patients can also cause an increased risk 
+                  for weight gain, cognitive decline, falls and other injuries, cerebrovascular 
+                  events, and mortality.
+            </p>
+          </section>
+          <div class="related-article w-100 mx-auto mb-4 row">
+            <div
+              class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+            >
+              <img
+                class="img-fluid"
+                src="{% static './img/article-01.png' %}"
+                alt=""
+              />
+            </div>
+            <div class="art-details col-md-9 col-lg-10">
+              <h5>Lecanemab's Promise and Peril: Alzheimer's Treatment Dilemma
+            </h5>
+              <p class="text-black-50">
+                <br>
+                Clinicians interested in treating patients with symptoms of mild cognitive
+                 impairment or mild dementia should carefully analyze the potential benefits
+                  and harms of monoclonal amyloid beta therapy, including likelihood of side
+                   effects and overall burden on the patient, according to researchers at the 
+                   2024 annual meeting of the American Geriatrics Society...
+              </p>
+              <a class="read-more more-article" href="{% url 'news_three' %}"
+                >Read more <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

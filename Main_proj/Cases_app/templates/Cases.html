@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MernWord - Cases</title>
+    <title>PharmaScope - Cases</title>
     <link rel="shortcut icon" href="{% static './img/icons8-pharmacy-shop-16.png' %}" type="image/x-icon" />
     <link rel="stylesheet" href="{% static 'css/cases.css' %}" />
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
@@ -20,7 +20,7 @@
 <body style="background-color: #F8FDFF;">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">MernWord</a>
+            <a class="navbar-brand" href="#">PharmaScope</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -86,7 +86,7 @@
                 </header>
                 <div class="article mb-4">
                     <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-01.png' %}" alt="">
+                        <img class="img-fluid" src="{% static './img/caseone.jpg' %}" alt="">
                     </div>
                     <div class="art-details col-md-10 px-2 px-md-4">
                         <h5>A 63-Year-Old Man With Abnormal Prostate Findings</h5>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="article mb-4">
                     <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-02.png' %}" alt="">
+                        <img class="img-fluid" src="{% static './img/casetwo.jpg' %}" alt="">
                     </div>
                     <div class="art-details col-md-10 px-2 px-md-4">
                         <h5>A 22-Year-Old Woman With Moderate Plaque Psoriasis</h5>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="article">
                     <div class="img-cont col-12 text-center text-md-start col-md-2 mb-4 mb-md-0 ">
-                        <img class="img-fluid" src="{% static './img/article-03.png' %}" alt="">
+                        <img class="img-fluid" src="{% static './img/casetree.jpg' %}" alt="">
                     </div>
                     <div class="art-details col-md-10 px-2 px-md-4">
                         <h5>A 35-Year-Old Woman With Recurrent Arm Paresthesia</h5>
@@ -143,7 +143,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <h2>
-                        <a href="#" class="logo">MernWord</a>
+                        <a href="#" class="logo">PharmaScope</a>
                     </h2>
                     <p class="text-white-50">
                         Empowering <span>Pharmacists</span> with Knowledge
@@ -162,10 +162,9 @@
                 <div class="col-6 col-lg-3 ps-lg-5 pe-lg-5">
                     <h5>Menu</h5>
                     <ul class="list-unstyled menu">
-                        <li><a class="text-decoration-none text-white-50" href="#">Home</a></li>
-                        <li><a class="text-decoration-none text-white-50" href="#">Interactions</a></li>
-                        <li><a class="text-decoration-none text-white-50" href="#">Drug I.D.</a></li>
-                        <li><a class="text-decoration-none text-white-50" href="#">Calculators</a></li>
+                        <li><a class="text-decoration-none text-white-50" href="{% url 'Home' %}">Home</a></li>
+                        <li><a class="text-decoration-none text-white-50" href="{% url 'check_interactions' %}">Interactions</a></li>
+                        <li><a class="text-decoration-none text-white-50" href="{% url 'Drug_id' %}">Drug I.D.</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-3 ps-lg-5 pe-lg-5">
@@ -182,14 +181,14 @@
                             <i class="fa-solid fa-phone me-2"></i> +20 1272753203
                         </li>
                         <li class="text-white-50">
-                            <i class="fa-solid fa-envelope me-2"></i> info@gmail.com
+                            <i class="fa-solid fa-envelope me-2"></i> info@pharma.com
                         </li>
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="copy-right">
-                <p class="text-center m-0">&copy; MernWord 2023. All Rights Reserved</p>
+                <p class="text-center m-0">&copy; PharmaScope 2023. All Rights Reserved</p>
             </div>
         </div>
     </footer>

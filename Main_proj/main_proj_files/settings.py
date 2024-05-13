@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'Food_Interaction_app',
     'Cases_app',
     'Registration_app',
+    'rest_framework',
     
 ]
 

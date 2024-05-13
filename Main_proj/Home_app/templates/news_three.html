@@ -1,0 +1,100 @@
+{% extends "news_base.html" %}
+{% load static %}
+
+{% block title %} news {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="">
+      <header class="position-relative">
+        <div class="header-title">
+          <h3 class="mb-3 title">
+            Lecanemab's Promise and Peril: Alzheimer's Treatment Dilemma
+          </h3>
+          <p class="pub-date">
+            <span>Publication date:</span> March 2, 2024 | 1 minute read
+          </p>
+        </div>
+        <div class="header-img text-center">
+          <img
+            class="w-100"
+            src="{% static './img/article-details-bg.png' %}"
+            alt=""
+          />
+        </div>
+      </header>
+
+      <div class="article-body bg-white">
+        <div class="container">
+          <section class="">
+            <div class="article-heading d-flex align-items-center gap-3">
+              <p>C</p>
+              <p>
+                linicians interested in treating patients with symptoms of mild 
+                cognitive impairment or mild dementia should carefully analyze the 
+                potential benefits and harms of monoclonal. <br />
+
+                according to researchers at the 2024 annual meeting of the American Geriatrics Society. 
+                Lecanemab (Leqembi) may help some patients by lowering the level of beta-amyloid protein in the brain.
+              </p>
+            </div>
+            <p>
+             But clinicians must weigh that advantage against risks and contraindications,
+            according to Esther Oh, MD, PhD.
+            </p>
+            <p>
+                he results from CLARITY, an 18-month, multicenter, double-blind trial involving 
+                1795 participants aged 50-90 years, showed that the variation between treatment
+                and placebo did not meet the criteria for a minimum clinically important difference
+                for mild cognitive impairment or mild Alzheimer's disease.
+            </p>
+            <h6>Read also Appropriate use recommendations exclude vitamin K </h6>
+            <p>
+                Blood biomarkers, PET imaging, and levels of amyloid-beta proteins 
+                in cerebrospinal fluid are used to determine eligibility for lecanemab. 
+                However, tau biomarkers may indicate signs of cognitive impairment decades 
+                prior to symptoms. Some evidence indicates that the drug may be more effective 
+                in individuals with low tau levels that are evident in earlier stages of disease. 
+            </p>
+            <p>
+              The Egyptian Ministry of Health has warned citizens against taking
+              Hitler's injection under any circumstances, as this combination
+              may cause a sharp drop in blood pressure, leading to cardiac
+              arrest. The Ministry also warned against taking any injections or
+              medications directly from pharmacies without consulting a
+              specialist doctor, because treatment depends primarily on the
+              correct diagnosis.
+            </p>
+          </section>
+          <div class="related-article w-100 mx-auto mb-4 row">
+            <div
+              class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+            >
+              <img
+                class="img-fluid"
+                src="{% static './img/article-01.png' %}"
+                alt=""
+              />
+            </div>
+            <div class="art-details col-md-9 col-lg-10">
+              <h5>Increasing Dosage of Varenicline and CNRT Improves Smoking Cessation
+            </h5>
+              <p class="text-black-50">
+                <br>
+                    Most smokers do successfully quit after their first attempt. 
+                    Switching patients from nicotine replacement therapy like the patch and
+                    lozenge to varenicline and increasing the dosage helped more people achieve 
+                    abstinence from cigarettes, according to a new study...
+              </p>
+              <a class="read-more more-article" href="{% url 'news_four' %}"
+                >Read more <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

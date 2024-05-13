@@ -1,0 +1,98 @@
+{% extends "article_base.html" %}
+{% load static %}
+
+{% block title %} article_one {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="">
+      <header class="position-relative">
+        <div class="header-title">
+          <h3 class="mb-3 title">
+            A person died in Egypt as a result of receiving Hitler's injection
+          </h3>
+          <p class="pub-date">
+            <span>Publication date:</span> March 2, 2024 | 1 minute read
+          </p>
+        </div>
+        <div class="header-img text-center">
+          <img
+            class="w-100"
+            src="{% static './img/article-details-bg.png' %}"
+            alt=""
+          />
+        </div>
+      </header>
+
+      <div class="article-body bg-white">
+        <div class="container">
+          <section class="">
+            <div class="article-heading d-flex align-items-center gap-3">
+              <p>A</p>
+              <p>
+                person died in Egypt as a result of receiving what is known as
+                the Hitler injection <br />
+                an injection used to quickly treat colds and influenza. <br />
+                his injection is widely used without a prescription in many
+                areas of Egypt, especially
+              </p>
+            </div>
+            <p>
+              remote villages, and it gives a quick feeling of improvement, but
+              most people do not know its risks. This injection consists of an
+              antibiotic, cortisone, and vitamins, a formula that is not
+              scientifically based and is not licensed to treat the common cold.
+            </p>
+            <p>
+              caused by bacteria or fungi. In addition, using antibiotics
+              without a doctor's supervision can cause anaphylactic shock, which
+              can lead to death if not treated quickly.
+            </p>
+            <h6>Read also Colds and antibiotics</h6>
+            <p>
+              Cortisone is also not used to treat cases of influenza and colds.
+              Rather, it is used to relieve severe swelling and pain in cases of
+              acute pneumonia, and its use is prohibited without medical
+              supervision due to its many side effects.
+            </p>
+            <p>
+              The Egyptian Ministry of Health has warned citizens against taking
+              Hitler's injection under any circumstances, as this combination
+              may cause a sharp drop in blood pressure, leading to cardiac
+              arrest. The Ministry also warned against taking any injections or
+              medications directly from pharmacies without consulting a
+              specialist doctor, because treatment depends primarily on the
+              correct diagnosis.
+            </p>
+          </section>
+          <div class="related-article w-100 mx-auto mb-4 row">
+            <div
+              class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+            >
+              <img
+                class="img-fluid"
+                src="{% static './img/article-01.png' %}"
+                alt=""
+              />
+            </div>
+            <div class="art-details col-md-9 col-lg-10">
+              <h5>RSV Vaccines See a Pricey Leap Forward in Disease Prevention
+            </h5>
+              <p class="text-black-50">
+                <br>
+                Respiratory syncytial virus (RSV) is a widespread respiratory pathogen causing a range of symptoms,
+                from mild rhinorrhea and cough to severe lower respiratory tract illness (LRTI).
+                Subtypes A and B of the virus typically surge during the fall and winter seasons...
+              </p>
+              <a class="read-more more-article" href="{% url 'article_two' %}"
+                >Read more <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

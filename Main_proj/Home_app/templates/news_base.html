@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static './img/icons8-pharmacy-shop-16.png' %}"
+      type="image/x-icon"
+    />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@100;300;400;600;700;800&display=swap"
+    rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  />
+  {% block head %}
+  {% endblock %}
+</head>
+
+<body style="background-color: #f8fdff">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">PharmaScope</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'Home' %}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Interactions
+              </a>
+              <ul class="dropdown-menu border-0">
+                <li>
+                  <a class="dropdown-item" href="{% url 'check_interactions' %}"
+                    >Drug Interaction</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'view_interactions' %}"
+                    >Food Interaction</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Drug_id' %}">Drug I.D.</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home' %}">Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Podcast' %}">Podcast</a>
+            </li>
+          </ul>
+
+          <div class="auth">
+            <a href="{% url 'signin' %}">Sign in</a>
+            <a class="sign-up" href="{% url 'signup' %}">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="heading text-center">
+      <p class="mb-2"><b>Latest News</b></p>
+      <h3>Pharmaceutical <span>News</span></h3>
+      <span>March3 ,2024 |By Pharma Scope</span>
+    </div>
+      </header>
+      {% block content %}
+
+      {% endblock content %}
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <h2>
+              <a href="#" class="logo">PharmaScope</a>
+            </h2>
+            <p class="text-white-50">
+              Empowering <span>Pharmacists</span> with Knowledge
+            </p>
+            <ul class="list-unstyled d-flex gap-3 icon">
+              <li>
+                <a class="text-black" href="#">
+                  <i
+                    class="fa-brands fa-facebook facebook p-2 rounded-circle bg-white"
+                  ></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-black" href="#">
+                  <i
+                    class="fa-brands fa-whatsapp whatsapp p-2 rounded-circle bg-white"
+                  ></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-black" href="#">
+                  <i
+                    class="fa-brands fa-twitter twitter p-2 rounded-circle bg-white"
+                  ></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-black" href="#">
+                  <i
+                    class="fa-brands fa-linkedin linkedin p-2 rounded-circle bg-white"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3 ps-lg-5 pe-lg-5">
+            <h5>Menu</h5>
+            <ul class="list-unstyled menu">
+              <li>
+                <a class="text-decoration-none text-white-50" href="{% url 'Home' %}">Home</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white-50" href="{% url 'check_interactions' %}"
+                  >Interactions</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white-50" href="{% url 'Drug_id' %}"
+                  >Drug I.D.</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3 ps-lg-5 pe-lg-5">
+            <h5>Help Center</h5>
+            <ul class="help list-unstyled">
+              <li>
+                <a class="text-decoration-none text-white-50" href="#"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white-50" href="#"
+                  >Account Information</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 ps-lg-5 pe-lg-5">
+            <h5>Contact us</h5>
+            <ul class="contact list-unstyled">
+              <li class="text-white-50">
+                <i class="fa-solid fa-phone me-2"></i> +20 1272753203
+              </li>
+              <li class="text-white-50">
+                <i class="fa-solid fa-envelope me-2"></i> info@pharma.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="copy-right">
+          <p class="text-center m-0">
+            © PharmaScope 2024. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

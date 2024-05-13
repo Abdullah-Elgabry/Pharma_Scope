@@ -1,0 +1,102 @@
+{% extends "news_base.html" %}
+{% load static %}
+
+{% block title %} news {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="">
+      <header class="position-relative">
+        <div class="header-title">
+          <h3 class="mb-3 title">
+            Increasing Dosage of Varenicline and CNRT Improves Smoking Cessation
+          </h3>
+          <p class="pub-date">
+            <span>Publication date:</span> March 2, 2024 | 1 minute read
+          </p>
+        </div>
+        <div class="header-img text-center">
+          <img
+            class="w-100"
+            src="{% static './img/article-details-bg.png' %}"
+            alt=""
+          />
+        </div>
+      </header>
+
+      <div class="article-body bg-white">
+        <div class="container">
+          <section class="">
+            <div class="article-heading d-flex align-items-center gap-3">
+              <p>M</p>
+              <p>
+                ost smokers do successfully quit after their first attempt. 
+                Switching patients from nicotine replacement therapy like the
+                patch and lozenge to varenicline and increasing the dosage helped
+                more people achieve abstinence from cigarettes, according to a new study. <br />
+
+                The double-blind, placebo-controlled, randomized trial included 490 participants <br />
+                who took 2 mg of varenicline or used a 21-mg nicotine patch and a 2-mg lozenge for
+                the initial 6 weeks of their first attempt at quitting smoking.
+              </p>
+            </div>
+            <p>
+                Participants who failed to abstain from cigarette smoking after
+                the initial period were re-randomized to continue the same treatment,
+                switch therapies, or increase the dosages to ≥ 3 mg of varenicline or
+                a 42-mg patch and lozenges for another 6 weeks.
+            </p>
+            <p>
+                Data were analyzed over a 4-year period starting in 2015 of adults up
+                to age 75 who smoked 20 cigarettes a day on average and did not have unstable
+                psychiatric disorders.
+            </p>
+            <h6>Read also How to TAKEAWAY</h6>
+            <p>
+                After the initial intervention period, the prescription drug appeared
+                to be more effective for smoking cessation: 22% of those who received 
+                combined nicotine replacement therapy (CNRT) abstained from smoking 
+                (95% credible interval [Crl], 12%-27%) and 36% abstained in the
+                varenicline group (95% CrI, 30%-42%).
+
+            </p>
+            <p>
+                For those who did not achieve abstinence after 6 weeks of using 
+                nicotine replacement therapy (NRT), 14% eventually quit after switching 
+                to varenicline for another 6 weeks; 14% achieved success after increasing 
+                their NRT patch dosage; and 8% were successful who continued with their 
+                original NRT dosage.
+
+            </p>
+          </section>
+          <div class="related-article w-100 mx-auto mb-4 row">
+            <div
+              class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+            >
+              <img
+                class="img-fluid"
+                src="{% static './img/article-01.png' %}"
+                alt=""
+              />
+            </div>
+            <div class="art-details col-md-9 col-lg-10">
+              <h5>Experts Share Practical Tips for Diagnosing Mild Hidradenitis Suppurativa</h5>
+              <p class="text-black-50">
+                <br>
+                Based on his experience caring for patients with hidradenitis suppurativa (HS),
+                dermatologist Christopher Sayed, MD, said that an exhaustive battery of tests
+                 is usually not required to diagnose early-stage HS, which can be mistaken for 
+                 other conditions, such as an infection, folliculitis, and acne....
+              </p>
+              <a class="read-more more-article" href="{% url 'news_one' %}"
+                >Read more <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

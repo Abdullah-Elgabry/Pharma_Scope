@@ -33,3 +33,26 @@ import json
 
 def Home(request):
     return render(request,'Home.html')
+
+
+def article_one(request):
+    return render(request,'article_one.html')
+
+def article_two(request):
+    return render(request,'article_two.html')
+
+def article_three(request):
+    return render(request,'article_three.html')
+
+def news_one(request):
+    return render(request, 'news_one.html')
+
+def news_two(request):
+    return render(request, 'news_two.html')
+
+def news_three(request):
+    return render(request, 'news_three.html')
+
+def news_four(request):
+    return render(request, 'news_four.html')
+

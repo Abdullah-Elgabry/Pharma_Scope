@@ -5,7 +5,7 @@
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MernWord</title>
+        <title>PharmaScope</title>
         <link
           rel="shortcut icon"
           href="{% static './img/icons8-pharmacy-shop-16.png' %}"
@@ -35,7 +35,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">MernWord</a>
+        <a class="navbar-brand" href="#">PharmaScope</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -125,10 +125,10 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
             <h2>Empowering <span>Pharmacists</span> with Knowledge</h2>
             <p class="text-black-50 mb-4">
-              Your essential tool for smarter pharmacy practice. MedWord
+              Your essential tool for smarter pharmacy practice. PharmaScope
               provides drug info, interactions, and prescription management,
               empowering you with knowledge. Elevate your expertise with
-              MedWord.
+              PharmaScope.
             </p>
             <a class="special-btn" href="#">Let's Start</a>
           </div>
@@ -144,12 +144,14 @@
 
     <div class="about">
       <div class="container">
-        <h3 class="text-center">About <span>MedWord</span></h3>
-        <p class="text-black-50 text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+        <h3 class="text-center">About <span>PharmaScope</span></h3>
+        <p class="text-black-50">
+        PharmaScope is your comprehensive online hub tailored for professionals in the pharmaceutical field.
+        We've curated an extensive collection of tools and resources to streamline and enhance your educational journey.
+        From essential reference materials to cutting-edge research databases, we've gathered everything you need in one convenient location.
+        Empowering pharmaceutical professionals to excel, learn, and innovate, PharmaScope is your go-to destination for advancing your
+        expertise and staying at the forefront of the industry.
+          
         </p>
       </div>
     </div>
@@ -166,12 +168,12 @@
                 alt=""
               />
               <div class="card-details">
-                <h5>Title here</h5>
+                <h5>Experts Share Practical Tips </h5>
                 <p class="text-black-50">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  Based on his experience caring for patients with hidradenitis
+                  suppurativa (HS).
                 </p>
-                <a class="read-more" href="#"
+                <a class="read-more" href="{% url 'news_one' %}"
                   >Read More <i class="fa-solid fa-arrow-right"></i
                 ></a>
               </div>
@@ -185,12 +187,13 @@
                 alt=""
               />
               <div class="card-details">
-                <h5>Title here</h5>
+                <h5>Do Antipsychotic Warning Work?
+                </h5>
                 <p class="text-black-50">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  Warning letters to care physicians
+                  regarding overprescription of quetiapine were helpful 
                 </p>
-                <a class="read-more" href="#"
+                <a class="read-more" href="{% url 'news_two' %}"
                   >Read More <i class="fa-solid fa-arrow-right"></i
                 ></a>
               </div>
@@ -204,12 +207,13 @@
                 alt=""
               />
               <div class="card-details">
-                <h5>Title here</h5>
+                <h5>Alzheimer's Treatment Dilemma</h5>
                 <p class="text-black-50">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  Clinicians interested in treating patients with symptoms of 
+                  mild cognitive impairment or mild.
+
                 </p>
-                <a class="read-more" href="#"
+                <a class="read-more" href="{% url 'news_three' %}"
                   >Read More <i class="fa-solid fa-arrow-right"></i
                 ></a>
               </div>
@@ -223,12 +227,14 @@
                 alt=""
               />
               <div class="card-details">
-                <h5>Title here</h5>
+                <h5>what Improves Smoking Cessation ?</h5>
                 <p class="text-black-50">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  Most smokers do successfully quit after their first attempt.
+                  Switching...
+
+
                 </p>
-                <a class="read-more" href="#"
+                <a class="read-more" href="{% url 'news_four' %}"
                   >Read More <i class="fa-solid fa-arrow-right"></i
                 ></a>
               </div>
@@ -833,7 +839,7 @@
     </div>    
     <div class="articles">
       <div class="container">
-        <h3>Patient<span>Articles</span></h3>
+        <h3> Pharmaceutical <span>Articles</span></h3>
         <div class="article mb-4">
           <img
             class="img-fluid"
@@ -841,14 +847,14 @@
             alt=""
           />
           <div class="art-details">
-            <h5>Title here</h5>
+            <h5>A person died in Egypt as a result of receiving Hitler's injection</h5>
             <p class="text-black-50">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <a class="read-more more-article" href=""
+              <br>
+            A person died in Egypt as a result of receiving what is known as the Hitler injection
+            an injection used to quickly treat colds and influenza.
+            his injection is widely used without a prescription in many areas of Egypt, especially
+            remote villages, and it gives a quick feeling of improvement, but most people do not know its risks....
+            <a class="read-more more-article" href="{% url 'article_one' %}"
               >Read more <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
@@ -860,14 +866,15 @@
             alt=""
           />
           <div class="art-details">
-            <h5>Title here</h5>
+            <h5>RSV Vaccines See a Pricey Leap Forward in Disease Prevention</h5>
             <p class="text-black-50">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              <br>
+              Respiratory syncytial virus (RSV) is a widespread respiratory pathogen
+              causing a range of symptoms, from mild rhinorrhea and cough to severe lower
+              respiratory tract illness (LRTI).Subtypes A and B of the virus typically
+              surge during the fall and winter seasons, disproportionately affecting older...
             </p>
-            <a class="read-more more-article" href=""
+            <a class="read-more more-article" href="{% url 'article_two' %}"
               >Read more <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
@@ -879,14 +886,15 @@
             alt=""
           />
           <div class="art-details">
-            <h5>Title here</h5>
+            <h5>New oral rinse could help detect gastric cancer in early stages</h5>
             <p class="text-black-50">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              <br>
+            This is early research that hasn't been published yet in a peer-reviewed
+            journal and this “swish and spit” rinse is not yet available.
+            In their study, researchers analyzed bacterial samples from 98 people - 30
+            with known gastric cancer, 30 with premalignant gastric conditions, and 38 people without gastric health issues...
             </p>
-            <a class="read-more more-article" href=""
+            <a class="read-more more-article" href="{% url 'article_three' %}"
               >Read more <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
@@ -997,14 +1005,12 @@
     </div>
   </form>
 
-
-
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-3">
             <h2>
-              <a href="#" class="logo">MernWord</a>
+              <a href="{% url 'Home' %}" class="logo">PharmaScope</a>
             </h2>
             <p class="text-white-50">
               Empowering <span>Pharmacists</span> with Knowledge
@@ -1044,21 +1050,16 @@
             <h5>Menu</h5>
             <ul class="list-unstyled menu">
               <li>
-                <a class="text-decoration-none text-white-50" href="#">Home</a>
+                <a class="text-decoration-none text-white-50" href="{% url 'Home' %}">Home</a>
               </li>
               <li>
-                <a class="text-decoration-none text-white-50" href="#"
+                <a class="text-decoration-none text-white-50" href="{% url 'check_interactions' %}"
                   >Interactions</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-white-50" href="#"
+                <a class="text-decoration-none text-white-50" href="{% url 'Drug_id' %}"
                   >Drug I.D.</a
-                >
-              </li>
-              <li>
-                <a class="text-decoration-none text-white-50" href="#"
-                  >Calculators</a
                 >
               </li>
             </ul>
@@ -1085,14 +1086,14 @@
                 <i class="fa-solid fa-phone me-2"></i> +20 1272753203
               </li>
               <li class="text-white-50">
-                <i class="fa-solid fa-envelope me-2"></i> info@gmail.com
+                <i class="fa-solid fa-envelope me-2"></i> info@pharma.com
               </li>
             </ul>
           </div>
         </div>
         <hr />
         <div class="copy-right">
-          <p class="text-center m-0">© MernWord 2024. All Rights Reserved</p>
+          <p class="text-center m-0">© PharmaScope 2024. All Rights Reserved</p>
         </div>
       </div>      
     </footer>

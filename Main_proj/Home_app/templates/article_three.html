@@ -1,0 +1,104 @@
+{% extends "article_base.html" %}
+{% load static %}
+{% block title %} article_three {% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="">
+  <header class="position-relative">
+    <div class="header-title">
+      <h3 class="mb-3 title">
+        New oral rinse could help detect gastric cancer in early stages
+      </h3>
+      <p class="pub-date">
+        <span>Publication date:</span> March 2, 2024 | 1 minute read
+      </p>
+    </div>
+    <div class="header-img text-center">
+      <img
+        class="w-100"
+        src="{% static './img/article-details-bg.png' %}"
+        alt=""
+      />
+    </div>
+  </header>
+
+  <div class="article-body bg-white">
+    <div class="container">
+      <section class="">
+        <div class="article-heading d-flex align-items-center gap-3">
+          <p>A</p>
+          <p>
+            An oral rinse could provide early detection of gastric cancer,
+            according to a study that will be presented at Digestive Disease Week 2024. <br />
+            This is early research that hasn't been published yet in a peer-reviewed journal
+            and this “swish and spit” rinse is not yet available.<br />
+            In their study, researchers analyzed bacterial samples from
+            98 people - 30 with known gastric cancer, 30 with premalignant gastric conditions,
+            and 38 people without gastric health issues.
+          </p>
+        </div>
+        <p>
+          remote villages, and it gives a quick feeling of improvement, but
+          most people do not know its risks. This injection consists of an
+          antibiotic, cortisone, and vitamins, a formula that is not
+          scientifically based and is not licensed to treat the common cold.
+        </p>
+        <p>
+          The researchers reported there was little difference in the microbiomeTrusted
+          Source of precancerous and cancerous groups, but they said there were distinct
+          differences between those groups and the healthy control group.The scientists
+          said their findings suggest that the changes in the microbiome could occur as
+          soon as the stomach environment starts to undergo changes that will eventually
+          develop into cancer.
+        </p>
+        <h6>Read also Reaction to potential oral rinse test</h6>
+        <p>
+          This is a very intriguing and important study since we have no known sensitive
+          methods, other than endoscopy, to detect gastric cancer or pre-gastric cancer lesions,
+          said Dr. Anton Bilchik, a surgical oncologist as well as the chief of medicine and the
+          director of the Gastrointestinal and Hepatobiliary Program at Providence Saint John's
+          Cancer Institute in California. “A mouth rinse also sounds simple and easy to perform
+          compared with an invasive procedure
+        </p>
+        <p>
+          “The microbiome (trillions of bacteria) in our body plays an important role in our
+          immune system and the prevention of cancer, but there are clearly some bacteria that
+          predispose us to cancer,” Bilchik, who wasn't involved in the study, told Medical News
+          Today. “A better understanding of these bacteria and the ability to detect them using a
+          non-invasive technique potentially allows screening of large populations, particularly
+          those at risk for developing gastric cancer.”
+        </p>
+      </section>
+      <div class="related-article w-100 mx-auto mb-4 row">
+        <div
+          class="art-img text-center text-md-start mb-4 mb-md-0 col-md-3 col-lg-2"
+        >
+          <img
+            class="img-fluid"
+            src="{% static './img/article-01.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="art-details col-md-9 col-lg-10">
+          <h5>A person died in Egypt as a result of receiving Hitler's injection</h5>
+          <p class="text-black-50">
+            <br>
+            A person died in Egypt as a result of receiving what is known as the Hitler injection
+            an injection used to quickly treat colds and influenza.
+            his injection is widely used without a prescription in many areas of Egypt, especially
+            remote villages, and it gives a quick feeling of improvement, but most people do not know its risks....
+          </p>
+          <a class="read-more more-article" href="{% url 'article_one' %}"
+            >Read more <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    {% endblock %}
