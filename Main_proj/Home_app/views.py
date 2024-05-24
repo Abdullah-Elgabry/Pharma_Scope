@@ -1,39 +1,35 @@
 from django.shortcuts import render
 import json
-#import openai, os
+import openai, os
 from dotenv import load_dotenv
 from django.conf import settings
-import json
 
-#load_dotenv()
-#api_key = os.getenv("OPENAI_KEY", None)
-#OPENAI_KEY='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'
-#openai.api_key = OPENAI_KEY
+load_dotenv()
 
-
-
-# def Home(request):
-#     chatbot_response = ""
-#     if request.method == 'POST':
-#         user_input = request.POST.get('user_input')
-#         if user_input:
-#             try:
-#                 response = openai.completions.create(
-#                     model='gpt-3.5-turbo-instruct',
-#                     prompt=user_input,
-#                     max_tokens=256,
-#                     temperature=0.5
-#                 )
-#                 chatbot_response = response.choices[0].text.strip()
-#             except openai.error.OpenAIError as e:
-#                 chatbot_response = f"Error: {e}"
-#
-#     context = {'response': chatbot_response}
-#     return render(request, 'Home.html', context)
+api_key = os.getenv("OPENAI_KEY", None)
+openai.api_key = api_key
 
 def Home(request):
-    return render(request,'Home.html')
+    chatbot_response = ""
+    if request.method == 'POST':
+        user_input = request.POST.get('user_input')
+        if user_input:
+            try:
+                response = openai.Completion.create(
+                    engine="gpt-3.5-turbo-instruct",
+                    prompt=user_input,
+                    max_tokens=256,
+                    temperature=0.5
+                )
+                chatbot_response = response.choices[0].text.strip()
+                
 
+            except openai.OpenAIError as e:
+                print("OpenAI Error:", e)
+                print("uncaught")
+
+    context = {'response': chatbot_response}
+    return render(request, 'Home.html', context)
 
 def article_one(request):
     return render(request,'article_one.html')
