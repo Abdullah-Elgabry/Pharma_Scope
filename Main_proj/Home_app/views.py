@@ -3,6 +3,7 @@ import json
 import openai, os
 from dotenv import load_dotenv
 from django.conf import settings
+from django.http import JsonResponse
 
 load_dotenv()
 
@@ -22,6 +23,8 @@ def Home(request):
                     temperature=0.5
                 )
                 chatbot_response = response.choices[0].text.strip()
+
+                return JsonResponse({'result':chatbot_response})
                 
 
             except openai.OpenAIError as e:

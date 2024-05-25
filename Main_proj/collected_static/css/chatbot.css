@@ -151,7 +151,7 @@ body {
 .message-box .first-chat {
   width: 200px;
   float: right;
-  background-color: #4c5aa1;
+  background-color: #1977d6;
   padding: 10px;
   margin: 14px 0px;
   border-radius: 5px;
@@ -166,8 +166,8 @@ body {
   width: 0px;
   height: 0px;
   border-left: 9px solid transparent;
-  border-right: 9px solid #4c5aa1;
-  border-top: 9px solid #4c5aa1;
+  border-right: 9px solid #1977d6;
+  border-top: 9px solid #1977d6;
   border-bottom: 9px solid transparent;
   right: -172px;
   bottom: -23px;
@@ -180,7 +180,7 @@ body {
 }
 
 .message-box .second-chat .circle {
-  background-color: #4c5aa1;
+  background-color: #1977d6;
   height: 30px;
   width: 30px;
   border-radius: 50%;

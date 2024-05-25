@@ -29,11 +29,9 @@ function rs() {
     var objDiv = document.getElementById("messageBox");
     objDiv.scrollTop = objDiv.scrollHeight;
 
-    responding()
   }
 
-  function responding(){
-    console.log(rsp);
+  function responding(rsp){
     document.getElementById(
       "messageBox"
     ).innerHTML += `<div class="second-chat">
@@ -48,7 +46,6 @@ function rs() {
   objDiv.scrollTop = objDiv.scrollHeight;
 
   }
-//press enter on keyboard and send message
 addEventListener("keypress", (e) => {
   if (e.keyCode === 13) {
     

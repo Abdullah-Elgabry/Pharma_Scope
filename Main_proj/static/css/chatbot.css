@@ -86,7 +86,7 @@ body {
   box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 24px;
 }
 .hi-there {
-  background-color: #7f8ac5;
+  background-color: #1761b8;
   color: #fff;
   padding: 20px 30px;
   border-radius: 5px;
@@ -98,7 +98,8 @@ body {
   font-size: 13px;
 }
 .chat-window .start-conversation {
-  padding: 15px 24px;
+  padding: 15px 40px;
+  height: 90px;
 }
 .chat-window .start-conversation h1 {
   font-size: 15px;
@@ -112,7 +113,7 @@ body {
   border-radius: 20px;
   padding: 7px 30px;
   margin: 10px 0px;
-  background-color: #13a884;
+  background-color: #1893dc;
   color: white;
 }
 .chat-window .start-conversation button span {
@@ -124,6 +125,7 @@ body {
   left: 6px;
   top: 3px;
 }
+
 
 /* chat window 2 */
 .chat-window2 {
@@ -151,7 +153,7 @@ body {
 .message-box .first-chat {
   width: 200px;
   float: right;
-  background-color: #4c5aa1;
+  background-color: #1977d6;
   padding: 10px;
   margin: 14px 0px;
   border-radius: 5px;
@@ -166,8 +168,8 @@ body {
   width: 0px;
   height: 0px;
   border-left: 9px solid transparent;
-  border-right: 9px solid #4c5aa1;
-  border-top: 9px solid #4c5aa1;
+  border-right: 9px solid #1977d6;
+  border-top: 9px solid #1977d6;
   border-bottom: 9px solid transparent;
   right: -172px;
   bottom: -23px;
@@ -180,7 +182,7 @@ body {
 }
 
 .message-box .second-chat .circle {
-  background-color: #4c5aa1;
+  background-color: #1977d6;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -236,6 +238,7 @@ body {
   border: none;
   outline: none;
   font-size: 14px;
+  width: 250px;
 }
 .chat-window2 .input-box .send-button {
   float: right;
@@ -270,7 +273,6 @@ body {
 .pl{
   font-size: 100px;
 }
-/* RESPONSIVE */
 @media screen and (max-width: 396px) {
   .chat-window {
     right: 14px;
