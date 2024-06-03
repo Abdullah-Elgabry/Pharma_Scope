@@ -110,21 +110,25 @@ main div header .description .title {
 }
 
 .article .art-details {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
 .article .art-details h5 {
     font-weight: 700;
+    margin-bottom: 15px;
 }
-
-.read-more {
+.article .art-details p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.article .art-details .read-more {
     text-decoration: none;
     color: var(--dark-blue);
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
-.read-more svg {
+.article .art-details .read-more svg {
     margin-bottom: -2px;
 }
 
@@ -132,13 +136,7 @@ main div header .description .title {
     display: block;
     width: fit-content;
     margin-left: auto;
-    padding: 5px;
-}
-
-.articles .read-more {
-    position: absolute;
-    bottom: 15px;
-    right: 25px;
+    /* padding: 5px; */
 }
 
 

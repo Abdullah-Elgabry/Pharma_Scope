@@ -21,17 +21,19 @@
         <section class="form-cont">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                    <!-- <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                        aria-selected="true">Description</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                        aria-selected="true">Description</button> -->
+                    <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                        aria-selected="false">Image</button>
+                        aria-selected="false">
+                        Image
+                    </button>
 
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active mt-3" id="nav-home" role="tabpanel"
+                <!-- <div class="tab-pane fade  mt-3" id="nav-home" role="tabpanel"
                     aria-labelledby="nav-home-tab">
                     <h6>Pill Imprint</h6>
                     <form action="">
@@ -61,9 +63,9 @@
                             <span class="results">0</span>
                         </div>
                     </form>
-                </div>
+                </div> -->
 
-                <div class="tab-pane fade mt-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane fade show active mt-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <form action="{% url 'classify_image' %}" id="upload-form" enctype="multipart/form-data" method="post">
                         {% csrf_token %}
                         <div>
@@ -89,7 +91,7 @@
 
                         <div>
                         <button type="submit">View Result</button>
-                        <span class="img-results" id="result">0</span>
+                        <span id="result">0</span>
                         </div>
                     </form>
                 </div>
@@ -100,7 +102,7 @@
         <section class="guide">
             <h6 class="text-center">HOW TO USE ?</h6>
             <ul>
-                <li>Write down any typing on the drug.</li>
+                <li>Write down any type on the drug.</li>
                 <li>Select the drug from the list.</li>
                 <li>Let the <span>magic works!</span></li>
             </ul>
@@ -108,7 +110,9 @@
     </div>
     <div class="result">
         <div>
-            
+            <p class="img-results">
+
+            </p>
         </div>
     </div>
 
