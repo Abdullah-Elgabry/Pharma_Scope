@@ -1,79 +1,3 @@
-body {
-    font-family: 'Poppins', sans-serif !important;
-    background-color: #edfaff !important;
-}
-main{
-    position: relative;
-}
-aside{
-    background-color: #fff;
-    height: 100vh;
-    transition: 0.5s;
-    text-align: center;
-    z-index: 99;
-    width: 10%;
-    padding: 2rem;
-    position: sticky;
-    top: 0;
-}
-aside.open{
-    padding: 2rem 4rem 2rem 6rem;
-    width: 25%;
-}
-aside a.logo{
-    display: block;
-}
-aside ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 3rem;
-}
-aside ul li{
-    margin-bottom: 2rem;
-}
-aside ul li a{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 32px;
-    margin: 0 auto;
-    /* color: #219EBC; */
-    color: #125a6c;
-    text-decoration: none;
-    transition: 0.3s all;
-    overflow: hidden;
-}
-aside ul li a.open{
-    width: 100%;
-    margin: 0;
-    text-align: start;
-    overflow: visible;
-}
-aside ul li a.active{
-    color: #023047;
-    font-weight: 600;
-}
-aside ul li a:hover{
-    color: #023047;
-    font-weight: 600;
-}
-aside ul li a:hover svg path{
-    fill: #023047;
-}
-aside button {
-    background-color: transparent;
-    border: none;
-    outline: 0;
-    margin-top: 2rem;
-}
-aside button svg{
-    color: #125a6c;
-    font-size: 22px;
-}
-aside button.close svg{
-    color: red;
-}
 article{
     width: 85%;
     min-height: 100vh;
@@ -172,13 +96,15 @@ article form #suggestionsContainer.active{
     background-color: #fff;
     width: 60%;
     box-shadow: 0 0 7px 3px #ddd;
-    padding: 10px;
+    /* padding: 10px; */
     top: 45px;
 }
 article form #suggestionsContainer .drug-suggestion{
-    padding: 5px;
+    padding: 10px 5px;
 }
-
+article form #suggestionsContainer .drug-suggestion:hover{
+    background-color: #ddd;
+}
 article div section:last-child{
     width: 30%;
     padding: 15px;
@@ -210,16 +136,29 @@ article .result{
 article .result h3 span{
     color: #0096EA;
 }
-article .result > div{
+/* article .result > div{
     padding: 2rem;
     border: 1.24px solid #E6EBED;
     border-radius: 19.88px;
-}
+} */
 article .result .inter-result{
-    max-height: 400px;
-    overflow-y: scroll;
+    max-height: 300px;
     border: 1.24px solid #858C94;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+}
+article .result .inter-result::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+}
+article .result .inter-result::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+article .result .inter-result::-webkit-scrollbar-thumb {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    border-radius: 10px;
 }
 article .result .inter-result p{
     padding: 20px 10px;
@@ -229,6 +168,9 @@ article .result .inter-result p{
     font-size: 15px;
     border-bottom: 1.24px solid #858C94;
     border-radius: 0 0 7px 7px;
+}
+article .result .inter-result p:last-child{
+    border-bottom:none;
 }
 .toggle-nav{
     background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);

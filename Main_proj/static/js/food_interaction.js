@@ -24,6 +24,7 @@ function handleInteractionResponse(responseText, formData) {
     document.getElementById("drugName").textContent = formData.get('drug_name');
 
     const interactionsList = document.getElementById("interactionsList");
+    interactionsList.style.overflowY = response.interactions.length > 4 ? "scroll" : "auto"
     interactionsList.innerHTML = "";
     response.interactions.forEach(interaction => {
         const p = document.createElement("p");
@@ -83,6 +84,7 @@ function displayDrugSuggestions(data) {
 
     if(data.length == 0){
         suggestionsContainer.innerHTML = "Not Found"
+        suggestionsContainer.style.padding="10px"
     }
 }
 

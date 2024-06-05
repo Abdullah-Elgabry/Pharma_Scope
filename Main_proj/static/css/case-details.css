@@ -9,6 +9,21 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);;
+    border-radius: 10px;
+}
+
 h3 span {
     color: var(--blue-color);
 }
