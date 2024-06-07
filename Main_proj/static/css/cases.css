@@ -35,6 +35,11 @@ nav {
     z-index: 999;
 }
 
+nav .navbar-brand svg{
+    width: 100px;
+    height: 41px;
+}
+
 nav div>a,
 nav ul li a {
     color: var(--dark-blue) !important;
