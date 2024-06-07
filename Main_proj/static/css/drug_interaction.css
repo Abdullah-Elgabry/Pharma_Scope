@@ -77,12 +77,37 @@ article .middle section{
     border-radius: 10px;
 }
 article .middle section:first-child{
-    width: 100%;
+    width: 70%;
     padding: 15px;
 }
-article .middle section h6{
+article .middle section:last-child{
+    width: 30%;
+    padding: 15px;
+}
+
+article div section:last-child ul{
+    list-style:none;
+    padding: 0 15px;
+    margin: 0;
+
+}
+article div section:last-child ul li{
     font-weight: 600;
     margin-bottom: 15px;
+}
+article div section:last-child ul li svg{
+    margin-right: 15px;
+    width: 24px;
+}
+/* article div section:last-child ul li:last-child svg{
+    margin-left: 15px;
+    margin-right: 30px;
+} */
+
+article .middle section h6{
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #023047;
 }
 article .middle section form input[type='text']{
     width: 60%;
@@ -219,6 +244,10 @@ article .result>div {
         width: 100%;
     }
 
+    article .middle section:last-child{
+        width: 100%;
+    }
+
     article .middle section form button[type='submit'],
     article .middle section form .btn-clear {
         width: 100%;
@@ -255,6 +284,9 @@ article .result>div {
 
     article .middle section:first-child {
         width: 60%;
+    }
+    article .middle section:last-child{
+        width: 40%;
     }
 
     article .middle section form button[type='submit'],

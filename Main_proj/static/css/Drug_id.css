@@ -64,8 +64,7 @@ article header div p:last-child {
 
 article .middle {
     width: 100%;
-    /* height: 200px; */
-    margin-top: 15px;
+    margin: 15px 0;
     display: flex;
     gap: 1.5rem;
 }
@@ -102,6 +101,12 @@ article div section form input {
     margin-bottom: 20px;
 }
 
+article div section form .form-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 article div section form button {
     padding: 0px 16px;
     border-radius: 8px;
@@ -117,15 +122,30 @@ article div section form button label {
     cursor: pointer;
 }
 
-article div section form .results , article div section form .img-results {
+article div section form .results {
+    text-align: center;
+    position: relative;
+    display: flex;
+    padding-left: 100px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    gap: 0;
+    width: fit-content;
+}
+article div section form .results.show{
+    gap: 120px;
+}
+article div section form .results svg{
+    position: relative;
+    z-index: 1;
+}
+article div section form .img-results {
     display: inline-block;
-    padding: 8px 16px;
-    margin-left: 10px;
-    border-radius: 8px;
-    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
-    border: 0;
-    color: white;
-    height: 40px;
+    color: #0096EA;
+    font-weight: 600;
+    position: absolute;
+    z-index: 0;
 }
 
 article div section form div .or {
@@ -183,7 +203,7 @@ article div section:last-child ul li {
 article div section:last-child ul li span {
     color: #0096EA;
 }
-
+/* 
 article div.result {
     width: 100%;
     min-height: 300px;
@@ -191,7 +211,7 @@ article div.result {
     margin-top: 15px;
     border-radius: 10px;
     padding: 1rem 3rem;
-}
+} */
 
 @media (width <=767px) {
     aside {

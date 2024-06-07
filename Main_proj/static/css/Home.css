@@ -4,8 +4,8 @@
     --baby-blue:rgba(187, 223, 240, 1);
     --foter-bg-color:rgba(55, 55, 57, 1)
 }
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif !important;
 }
 h3 span {
     color: var(--blue-color);

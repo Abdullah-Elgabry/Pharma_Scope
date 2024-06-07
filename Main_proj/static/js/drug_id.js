@@ -1,17 +1,17 @@
-let form_select = document.querySelector(".form-select"); 
+// let form_select = document.querySelector(".form-select"); 
 
-form_select.onchange = function () {
-  console.log(form_select.value);
-  if (form_select.value.includes('Select')) {
-    this.style.paddingLeft = '10px'
-    document.querySelector('.color').style.backgroundColor = `transparent`;
-  } else {
-    this.style.paddingLeft = "40px";
-    document.querySelector(
-      ".color"
-    ).style.backgroundColor = `${form_select.value}`;
-  }
-}; 
+// form_select.onchange = function () {
+//   console.log(form_select.value);
+//   if (form_select.value.includes('Select')) {
+//     this.style.paddingLeft = '10px'
+//     document.querySelector('.color').style.backgroundColor = `transparent`;
+//   } else {
+//     this.style.paddingLeft = "40px";
+//     document.querySelector(
+//       ".color"
+//     ).style.backgroundColor = `${form_select.value}`;
+//   }
+// }; 
 
 
 function dropHandler(ev) {
@@ -83,9 +83,11 @@ document.getElementById('upload-form').addEventListener('submit', function(event
         var resultElement = document.querySelector('.img-results');
         if (resultElement) {
             if ('result' in data) {
+                document.querySelector('.results').classList.add("show");
                 resultElement.innerHTML = data.result;
             } else {
                 resultElement.innerHTML = "Error: " + data.error;
+                
             }
         } else {
             console.error("Element with class 'result' not found");
